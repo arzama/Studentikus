@@ -1,0 +1,41 @@
+﻿@using System
+@using System.Collections.Generic
+@using System.IdentityModel
+@using NasSeminarski.Models
+
+@model NasSeminarski.Areas.ModulRecepcioner.Models.SobaPrikaziVM
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Prikazi</title>
+</head>
+<body>
+   
+    <h2><b>Sobe</b></h2>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Broj sobe</th>
+                    <th>Sprat</th>
+                    <th>Akcija</th>
+                </tr>
+            </thead>
+            @foreach (Soba x in Model.sobe)
+            {
+                <tr>
+                    <td>@x.BrojSobe</td>
+                    <td>@x.Sprat</td>
+                    <td>
+                        @Html.ActionLink("Rezerviši", "UrediRezervaciju", new { raId = @x.Id })
+                    </td>
+                </tr>
+
+            }
+        </table>
+    </div>
+</body>
+</html>

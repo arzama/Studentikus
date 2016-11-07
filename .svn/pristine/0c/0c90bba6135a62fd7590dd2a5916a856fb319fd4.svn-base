@@ -1,0 +1,56 @@
+﻿@using NasSeminarski.Models
+
+@model NasSeminarski.Areas.ModulGost.Models.RezervacijePrikaziVM
+<form method="post">
+    <div>
+        <label>Datum prijave</label>
+        @Html.TextBox("DatumPrijave", Model.DatumPrijave.ToMyStrDMYYYY(""), new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.DatumPrijave)
+
+    </div>
+
+   <div>
+    <label>Datum odjave</label>
+       @Html.TextBox("DatumOdjave", Model.DatumOdjave.ToMyStrDMYYYY(""), new { @class = "form-control" })
+       @Html.ValidationMessageFor(model => model.DatumOdjave)
+
+
+</div>
+    <div>
+        <label>Broj osoba</label>
+        @Html.TextBoxFor(model => model.BrojOsoba, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.BrojOsoba)
+
+
+    </div>
+    <div>
+        @Html.ValidationSummary()
+    </div>
+    <br />
+    <input type="submit" value="Traži" class="btn btn-success" />
+</form>
+
+@*<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Broj sobe</th>
+        </tr>
+    </thead>
+
+    @foreach (NasSeminarski.Areas.ModulGost.Models.RezervacijePrikaziVM.Rezervacije x in Model.rezervacije)
+    {
+
+        <tr>
+
+            <th>@x.BrojSobe</th>
+
+        </tr>
+    }
+</table>*@
+<br />
+<br />
+<a href="/ModulGost/Gost/PrikaziRezervaciju" class="btn btn-success btn-sm">
+        <span class=" glyphicon glyphicon-align-right" aria-hidden="true">
+        </span>
+        Prikaži rezervacije
+    </a>

@@ -1,0 +1,45 @@
+﻿@using NasSeminarski.Models
+@model NasSeminarski.Areas.ModulRacunovodja.Controllers.PlataController.UrediVM
+           <br />
+
+<h2 style="color:darksalmon"><b>EVIDENCIJA PLATA ZAPOSLENIKA</b></h2>
+</br>
+@using (Html.BeginForm("Snimi", "Plata"))
+{
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        <label>Zaposlenik</label>
+        @Html.DropDownListFor(model => model.ZaposlenikId, Model.ZaposlenikStavka, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ZaposlenikId)
+
+
+
+    </div>
+    <div class="form-group">
+        <label>Iznos plate</label>
+        @Html.TextBoxFor(model => model.iznosPlate, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.iznosPlate)
+
+
+
+    </div>
+
+    <div class="form-group">
+        <label>Rok isplate</label>
+        @Html.TextBoxFor(model => model.RokIsplate, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.RokIsplate)
+
+
+
+    </div>
+    <div class="form-group">
+        <label>Isplaceno</label>
+        @Html.CheckBoxFor(model => model.Isplaceno, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.ValidationSummary()
+    </div>
+    <input type="submit" value="Snimi" class="btn btn-danger" />
+}
+

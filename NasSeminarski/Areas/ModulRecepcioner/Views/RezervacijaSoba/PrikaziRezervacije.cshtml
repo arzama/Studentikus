@@ -1,0 +1,57 @@
+﻿@using System
+@using System.Collections.Generic
+@using System.IdentityModel
+@using NasSeminarski.Models
+
+@model NasSeminarski.Areas.ModulRecepcioner.Models.RezervacijaSobaPrikaziViewModel
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"  />
+    <title>PrikaziRezervaciju</title>
+</head>
+<body>
+   
+    <h2><b>Rezervacije</b></h2>
+    <div>
+        <table border="1" style="font-family:Arial" class="datepicker-days" >
+            <thead>
+                <tr>
+                    <th>Datum prijave</th>
+                    <th>Datum odjave</th>
+                    <th>Broj sobe</th>
+                    <th>Ime</th>
+                    <th>Prezime</th>
+                    <th>Akcija</th>
+                </tr>
+            </thead>
+            @foreach (NasSeminarski.Areas.ModulRecepcioner.Models.RezervacijaSobaPrikaziViewModel.Rezervacije x in Model.rezervacije)
+            {
+                <tr>
+                    <td>@x.DatumPrijave</td>
+                    <td>@x.DatumOdjave</td>
+                    <td>@x.BrojSobe</td>
+                    <td>@x.Ime</td>
+                    <td>@x.Prezime</td>
+
+                    <td>
+                        @Html.ActionLink("Uredi podatke o rezervaciji", "UrediRezervaciju", new { raId = @x.rezervacijaId })
+
+                    @Html.ActionLink("Otkaži rezervaciju", "Ponisti", new { raId = @x.rezervacijaId })
+                </td>
+            </tr>
+            }
+        </table>
+    </div>
+    <br />
+    <br />
+    <a href="/ModulRecepcioner/RezervacijaSoba" class="btn btn-default btn-sm">
+        <span class=" glyphicon glyphicon-home" aria-hidden="true">
+        </span>
+        Vrati se natrag
+    </a>
+</body>
+</html>

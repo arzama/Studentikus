@@ -1,0 +1,51 @@
+﻿@model NasSeminarski.Areas.ModulUprava.Controllers.UgovorController.UrediVM
+
+
+
+@using (Html.BeginForm("Snimi", "Ugovor"))
+{
+    @Html.HiddenFor(model => model.Id)
+
+
+    <div class="form-group">
+        <label>Datum</label>
+        @Html.TextBoxFor(model => model.Datum, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Datum)
+    </div>
+
+    <div class="form-group">
+        <label>Broj kartice</label>
+        @Html.TextBoxFor(model => model.BrojKartice, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.BrojKartice)
+    </div>
+
+    <div class="form-group">
+        <label>Student</label>
+        @Html.DropDownListFor(model => model.StudentId, Model.StudentStavke, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.StudentId)
+    </div>
+
+    <div class="form-group">
+        <label>Soba</label>
+        @Html.DropDownListFor(model => model.SobaId, Model.SobaStavke, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.SobaId)
+    </div>
+    <div class="form-group">
+        <label>Školska godina</label>
+        @Html.DropDownListFor(model => model.SkolskaGodinaId, Model.SkolskaGodinaStavke, new { @class = "form-control" })
+     @Html.ValidationMessageFor(model => model.SkolskaGodinaId)
+    </div>
+
+    
+
+    <div>
+        @Html.ValidationSummary()
+    </div>
+
+
+
+    <input type="submit" id="Snimi" value="Snimi" class="btn btn-success" />
+}
+<div>
+    @Html.ActionLink("Vrati na listu", "Index")
+</div>

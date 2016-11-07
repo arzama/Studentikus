@@ -1,0 +1,60 @@
+﻿@using System
+@using System.Collections.Generic
+@using System.IdentityModel
+@using NasSeminarski.Models
+
+@model NasSeminarski.Areas.ModulGost.Models.RezervacijeUrediVM
+
+
+<h2><b>Rezervacije</b></h2>
+
+<form action="/ModulGost/Rezervacija/Snimi" />
+@Html.HiddenFor(model => model.Id)
+
+
+
+@*<div class="form-group">
+    <label>Datum prijave</label>
+    @Html.TextBoxFor(model => model.DatumPrijave, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.DatumPrijave)
+</div>
+
+<div class="form-group">
+    <label>Datum odjave</label>
+    @Html.TextBoxFor(model => model.DatumOdjave, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.DatumOdjave)
+</div>*@
+
+<div class="form-group">
+    <label>Broj sobe</label>
+    @Html.TextBoxFor(model => model.BrojSobe, new { @class = "form-control", @readonly = true })
+    @Html.ValidationMessageFor(model => model.BrojSobe)
+</div>
+
+
+<div>
+    @Html.ValidationSummary()
+</div>
+
+<input type="submit" value="Sačuvaj" />
+<input type="button" onclick="showPopup()"/>
+    <div id="divPopup" class="table-responsive" style="display:none">
+        <div>Uspješno ste rezervisali sobu !</div>
+    </div>
+    <script type="text/javascript">
+        function showPopup()
+        {
+            $("#divPopup").dialog({
+                height: 400,
+                width: 500,
+                modal: true,
+                buttons: {
+                    "OK": function () {
+                        $(this).dialog("close");
+                        alert("You selected OK !")
+                    }
+
+                }
+            })
+        }
+    </script>

@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C150DCD8-4CA7-4D5D-A11D-1443B34C2E00}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Studentikus_DAL</RootNamespace>
+    <AssemblyName>Studentikus_DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrojDesavanja1.Designer.cs">
+      <DependentUpon>BrojDesavanja1.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="DAConn.cs" />
+    <Compile Include="DADesavanjaFilter.cs" />
+    <Compile Include="DAGetAllKorisnici.cs" />
+    <Compile Include="DAGetKljucevi.cs" />
+    <Compile Include="DAGetKorisnici.cs" />
+    <Compile Include="DAGetTrenutniKorisnici.cs" />
+    <Compile Include="DAKorisniciByRezervacijaId.cs" />
+    <Compile Include="DAPretragaKorisnika.cs" />
+    <Compile Include="DARezervacije.cs" />
+    <Compile Include="DARezervacijeByRecepcioner.cs" />
+    <Compile Include="DAStudentikus.cs" />
+    <Compile Include="DAZaduzenjeKljuceva.cs" />
+    <Compile Include="DAZaposlenici.cs" />
+    <Compile Include="DSKorisnici.cs">
+      <DependentUpon>DSKorisnici.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSKorisnici.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSKorisnici.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSPretragaKorisnika.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPretragaKorisnika.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSRezervacije.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSRezervacije.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSZaduzenjeKljuca.cs">
+      <DependentUpon>DSZaduzenjeKljuca.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSZaduzenjeKljuca.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSZaduzenjeKljuca.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSZaposlenici.cs">
+      <DependentUpon>DSZaposlenici.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSZaposlenici.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSZaposlenici.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSZaposlenikUloge.Designer.cs">
+      <DependentUpon>DSZaposlenikUloge.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_Kljuc.cs">
+      <DependentUpon>DS_Kljuc.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Kljuc.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Kljuc.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rodjendan.Designer.cs">
+      <DependentUpon>DS_Rodjendan.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_Studentikus.cs">
+      <DependentUpon>DS_Studentikus.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Studentikus.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Studentikus.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GostiiPet_DS.cs">
+      <DependentUpon>GostiiPet_DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GostiiPet_DS.Designer.cs">
+      <DependentUpon>GostiiPet_DS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="KljuccDS.Designer.cs">
+      <DependentUpon>KljuccDS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Login.cs" />
+    <Compile Include="Neupotrebljivi_Inventari.Designer.cs">
+      <DependentUpon>Neupotrebljivi_Inventari.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ObrociDanas1.Designer.cs">
+      <DependentUpon>ObrociDanas1.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Rezervacija_DS.Designer.cs">
+      <DependentUpon>Rezervacija_DS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_RezervacijeTKM.Designer.cs">
+      <DependentUpon>DS_RezervacijeTKM</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="si001_studentDataSet.cs">
+      <DependentUpon>si001_studentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="si001_studentDataSet.Designer.cs">
+      <DependentUpon>si001_studentDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Students.Designer.cs">
+      <DependentUpon>Students.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BrojDesavanja1.xsc">
+      <DependentUpon>BrojDesavanja1.xsd</DependentUpon>
+    </None>
+    <None Include="BrojDesavanja1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BrojDesavanja1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BrojDesavanja1.xss">
+      <DependentUpon>BrojDesavanja1.xsd</DependentUpon>
+    </None>
+    <None Include="DSKorisnici.xsc">
+      <DependentUpon>DSKorisnici.xsd</DependentUpon>
+    </None>
+    <None Include="DSKorisnici.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSKorisnici.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSKorisnici.xss">
+      <DependentUpon>DSKorisnici.xsd</DependentUpon>
+    </None>
+    <None Include="DSPretragaKorisnika.xsc">
+      <DependentUpon>DSPretragaKorisnika.xsd</DependentUpon>
+    </None>
+    <None Include="DSPretragaKorisnika.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPretragaKorisnika.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSPretragaKorisnika.xss">
+      <DependentUpon>DSPretragaKorisnika.xsd</DependentUpon>
+    </None>
+    <None Include="DSRezervacije.xsc">
+      <DependentUpon>DSRezervacije.xsd</DependentUpon>
+    </None>
+    <None Include="DSRezervacije.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSRezervacije.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSRezervacije.xss">
+      <DependentUpon>DSRezervacije.xsd</DependentUpon>
+    </None>
+    <None Include="DSZaduzenjeKljuca.xsc">
+      <DependentUpon>DSZaduzenjeKljuca.xsd</DependentUpon>
+    </None>
+    <None Include="DSZaduzenjeKljuca.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSZaduzenjeKljuca.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSZaduzenjeKljuca.xss">
+      <DependentUpon>DSZaduzenjeKljuca.xsd</DependentUpon>
+    </None>
+    <None Include="DSZaposlenici.xsc">
+      <DependentUpon>DSZaposlenici.xsd</DependentUpon>
+    </None>
+    <None Include="DSZaposlenici.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSZaposlenici.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSZaposlenici.xss">
+      <DependentUpon>DSZaposlenici.xsd</DependentUpon>
+    </None>
+    <None Include="DSZaposlenikUloge.xsc">
+      <DependentUpon>DSZaposlenikUloge.xsd</DependentUpon>
+    </None>
+    <None Include="DSZaposlenikUloge.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSZaposlenikUloge.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSZaposlenikUloge.xss">
+      <DependentUpon>DSZaposlenikUloge.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Kljuc.xsc">
+      <DependentUpon>DS_Kljuc.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Kljuc.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Kljuc.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Kljuc.xss">
+      <DependentUpon>DS_Kljuc.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rodjendan.xsc">
+      <DependentUpon>DS_Rodjendan.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rodjendan.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rodjendan.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Rodjendan.xss">
+      <DependentUpon>DS_Rodjendan.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Studentikus.xsc">
+      <DependentUpon>DS_Studentikus.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Studentikus.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Studentikus.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Studentikus.xss">
+      <DependentUpon>DS_Studentikus.xsd</DependentUpon>
+    </None>
+    <None Include="GostiiPet_DS.xsc">
+      <DependentUpon>GostiiPet_DS.xsd</DependentUpon>
+    </None>
+    <None Include="GostiiPet_DS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GostiiPet_DS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GostiiPet_DS.xss">
+      <DependentUpon>GostiiPet_DS.xsd</DependentUpon>
+    </None>
+    <None Include="KljuccDS.xsc">
+      <DependentUpon>KljuccDS.xsd</DependentUpon>
+    </None>
+    <None Include="KljuccDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KljuccDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KljuccDS.xss">
+      <DependentUpon>KljuccDS.xsd</DependentUpon>
+    </None>
+    <None Include="Neupotrebljivi_Inventari.xsc">
+      <DependentUpon>Neupotrebljivi_Inventari.xsd</DependentUpon>
+    </None>
+    <None Include="Neupotrebljivi_Inventari.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Neupotrebljivi_Inventari.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Neupotrebljivi_Inventari.xss">
+      <DependentUpon>Neupotrebljivi_Inventari.xsd</DependentUpon>
+    </None>
+    <None Include="ObrociDanas1.xsc">
+      <DependentUpon>ObrociDanas1.xsd</DependentUpon>
+    </None>
+    <None Include="ObrociDanas1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ObrociDanas1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ObrociDanas1.xss">
+      <DependentUpon>ObrociDanas1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\BrojDesavanja1.datasource" />
+    <None Include="Properties\DataSources\BrojDesavanja1.usp_BrojDesavanja_PoMjesecuiGodiniDataTable.datasource" />
+    <None Include="Properties\DataSources\BrojDesavanja1.usp_BrojDesavanja_PoMjesecuiGodiniRow.datasource" />
+    <None Include="Properties\DataSources\BrojDesavanja1.usp_BrojDesavanja_PoMjesecuiGodiniRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\BrojDesavanja1.usp_BrojDesavanja_PoMjesecuiGodiniRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Connection.datasource" />
+    <None Include="Properties\DataSources\DAConn.datasource" />
+    <None Include="Properties\DataSources\DADesavanjaFilter.datasource" />
+    <None Include="Properties\DataSources\DAGetAllKorisnici.datasource" />
+    <None Include="Properties\DataSources\DAGetKljucevi.datasource" />
+    <None Include="Properties\DataSources\DAGetKorisnici.datasource" />
+    <None Include="Properties\DataSources\DAGetTrenutniKorisnici.datasource" />
+    <None Include="Properties\DataSources\DAKorisniciByRezervacijaId.datasource" />
+    <None Include="Properties\DataSources\DAPretragaKorisnika.datasource" />
+    <None Include="Properties\DataSources\DARezervacije.datasource" />
+    <None Include="Properties\DataSources\DARezervacijeByRecepcioner.datasource" />
+    <None Include="Properties\DataSources\DAStudentikus.datasource" />
+    <None Include="Properties\DataSources\DAZaduzenjeKljuceva.datasource" />
+    <None Include="Properties\DataSources\DAZaposlenici.datasource" />
+    <None Include="Properties\DataSources\DSKorisnici.datasource" />
+    <None Include="Properties\DataSources\DSKorisnici.KorisniksDataTable.datasource" />
+    <None Include="Properties\DataSources\DSKorisnici.KorisniksRow.datasource" />
+    <None Include="Properties\DataSources\DSKorisnici.KorisniksRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DSKorisnici.KorisniksRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DSPretragaKorisnika.datasource" />
+    <None Include="Properties\DataSources\DSPretragaKorisnika.KorisniksDataTable.datasource" />
+    <None Include="Properties\DataSources\DSPretragaKorisnika.KorisniksRow.datasource" />
+    <None Include="Properties\DataSources\DSPretragaKorisnika.KorisniksRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DSPretragaKorisnika.KorisniksRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DSRezervacije.datasource" />
+    <None Include="Properties\DataSources\DSRezervacije.KorisniksDataTable.datasource" />
+    <None Include="Properties\DataSources\DSRezervacije.KorisniksRow.datasource" />
+    <None Include="Properties\DataSources\DSRezervacije.KorisniksRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DSRezervacije.KorisniksRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DSRezervacije.RezervacijaSobesDataTable.datasource" />
+    <None Include="Properties\DataSources\DSRezervacije.RezervacijaSobesRow.datasource" />
+    <None Include="Properties\DataSources\DSRezervacije.RezervacijaSobesRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DSRezervacije.RezervacijaSobesRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DSRezervacije.SobasDataTable.datasource" />
+    <None Include="Properties\DataSources\DSRezervacije.SobasRow.datasource" />
+    <None Include="Properties\DataSources\DSRezervacije.SobasRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DSRezervacije.SobasRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DSZaduzenjeKljuca.datasource" />
+    <None Include="Properties\DataSources\DSZaduzenjeKljuca.KljucsDataTable.datasource" />
+    <None Include="Properties\DataSources\DSZaduzenjeKljuca.KljucsRow.datasource" />
+    <None Include="Properties\DataSources\DSZaduzenjeKljuca.KljucsRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DSZaduzenjeKljuca.KljucsRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DSZaduzenjeKljuca.SobasDataTable.datasource" />
+    <None Include="Properties\DataSources\DSZaduzenjeKljuca.SobasRow.datasource" />
+    <None Include="Properties\DataSources\DSZaduzenjeKljuca.SobasRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DSZaduzenjeKljuca.SobasRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DSZaduzenjeKljuca.ZaduzenjeKljucasDataTable.datasource" />
+    <None Include="Properties\DataSources\DSZaduzenjeKljuca.ZaduzenjeKljucasRow.datasource" />
+    <None Include="Properties\DataSources\DSZaduzenjeKljuca.ZaduzenjeKljucasRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DSZaduzenjeKljuca.ZaduzenjeKljucasRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DSZaposlenici.datasource" />
+    <None Include="Properties\DataSources\DSZaposlenici.ZaposleniksDataTable.datasource" />
+    <None Include="Properties\DataSources\DSZaposlenici.ZaposleniksRow.datasource" />
+    <None Include="Properties\DataSources\DSZaposlenici.ZaposleniksRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DSZaposlenici.ZaposleniksRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DSZaposlenikUloge.datasource" />
+    <None Include="Properties\DataSources\DSZaposlenikUloge.viewZaposlenikUlogaDataTable.datasource" />
+    <None Include="Properties\DataSources\DSZaposlenikUloge.viewZaposlenikUlogaRow.datasource" />
+    <None Include="Properties\DataSources\DSZaposlenikUloge.viewZaposlenikUlogaRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DSZaposlenikUloge.viewZaposlenikUlogaRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DS_Kljuc.datasource" />
+    <None Include="Properties\DataSources\DS_Kljuc.KljucsDataTable.datasource" />
+    <None Include="Properties\DataSources\DS_Kljuc.KljucsRow.datasource" />
+    <None Include="Properties\DataSources\DS_Kljuc.KljucsRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DS_Kljuc.KljucsRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DS_Kljuc.KorisniksDataTable.datasource" />
+    <None Include="Properties\DataSources\DS_Kljuc.KorisniksRow.datasource" />
+    <None Include="Properties\DataSources\DS_Kljuc.KorisniksRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DS_Kljuc.KorisniksRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DS_Kljuc.ZaduzenjeKljucasDataTable.datasource" />
+    <None Include="Properties\DataSources\DS_Kljuc.ZaduzenjeKljucasRow.datasource" />
+    <None Include="Properties\DataSources\DS_Kljuc.ZaduzenjeKljucasRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DS_Kljuc.ZaduzenjeKljucasRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DS_Rodjendan.datasource" />
+    <None Include="Properties\DataSources\DS_Rodjendan.view_Rodjendan1DataTable.datasource" />
+    <None Include="Properties\DataSources\DS_Rodjendan.view_Rodjendan1Row.datasource" />
+    <None Include="Properties\DataSources\DS_Rodjendan.view_Rodjendan1RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DS_Rodjendan.view_Rodjendan1RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.DesavanjasDataTable.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.DesavanjasRow.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.DesavanjasRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.DesavanjasRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.KorisniksDataTable.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.KorisniksRow.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.KorisniksRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.KorisniksRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.RezervacijaSobesDataTable.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.RezervacijaSobesRow.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.RezervacijaSobesRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.RezervacijaSobesRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.SobasDataTable.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.SobasRow.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.SobasRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.SobasRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.StudentsDataTable.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.StudentsRow.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.StudentsRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DS_Studentikus.StudentsRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\GostiiPet_DS.datasource" />
+    <None Include="Properties\DataSources\GostiiPet_DS.view_KorisniciPet1DataTable.datasource" />
+    <None Include="Properties\DataSources\GostiiPet_DS.view_KorisniciPet1Row.datasource" />
+    <None Include="Properties\DataSources\GostiiPet_DS.view_KorisniciPet1RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\GostiiPet_DS.view_KorisniciPet1RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\KljuccDS.datasource" />
+    <None Include="Properties\DataSources\KljuccDS.view_KljucDatum1DataTable.datasource" />
+    <None Include="Properties\DataSources\KljuccDS.view_KljucDatum1Row.datasource" />
+    <None Include="Properties\DataSources\KljuccDS.view_KljucDatum1RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\KljuccDS.view_KljucDatum1RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Login.datasource" />
+    <None Include="Properties\DataSources\Neupotrebljivi_Inventari.datasource" />
+    <None Include="Properties\DataSources\Neupotrebljivi_Inventari.view_InventarZaposlenik2DataTable.datasource" />
+    <None Include="Properties\DataSources\Neupotrebljivi_Inventari.view_InventarZaposlenik2Row.datasource" />
+    <None Include="Properties\DataSources\Neupotrebljivi_Inventari.view_InventarZaposlenik2RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\Neupotrebljivi_Inventari.view_InventarZaposlenik2RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ObrociDanas1.datasource" />
+    <None Include="Properties\DataSources\ObrociDanas1.usp_ObrociDanasDataTable.datasource" />
+    <None Include="Properties\DataSources\ObrociDanas1.usp_ObrociDanasRow.datasource" />
+    <None Include="Properties\DataSources\ObrociDanas1.usp_ObrociDanasRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ObrociDanas1.usp_ObrociDanasRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Rezervacija_DS.datasource" />
+    <None Include="Properties\DataSources\Rezervacija_DS.view_Rezervacije1DataTable.datasource" />
+    <None Include="Properties\DataSources\Rezervacija_DS.view_Rezervacije1Row.datasource" />
+    <None Include="Properties\DataSources\Rezervacija_DS.view_Rezervacije1RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\Rezervacija_DS.view_Rezervacije1RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\si001_RezervacijeTKMMDataSet.datasource" />
+    <None Include="Properties\DataSources\si001_RezervacijeTKMMDataSet.view_RezervacijeDataTable.datasource" />
+    <None Include="Properties\DataSources\si001_RezervacijeTKMMDataSet.view_RezervacijeRow.datasource" />
+    <None Include="Properties\DataSources\si001_RezervacijeTKMMDataSet.view_RezervacijeRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\si001_RezervacijeTKMMDataSet.view_RezervacijeRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\si001_studentDataSet.datasource" />
+    <None Include="Properties\DataSources\si001_studentDataSet.viewStudentDataTable.datasource" />
+    <None Include="Properties\DataSources\si001_studentDataSet.viewStudentRow.datasource" />
+    <None Include="Properties\DataSources\si001_studentDataSet.viewStudentRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\si001_studentDataSet.viewStudentRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.BrojDesavanja1TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.BrojDesavanja1TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.BrojDesavanja1TableAdapters.usp_BrojDesavanja_PoMjesecuiGodiniTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSKorisniciTableAdapters.KorisniksTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSKorisniciTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSKorisniciTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSPretragaKorisnikaTableAdapters.KorisniksTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSPretragaKorisnikaTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSPretragaKorisnikaTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSRezervacijeTableAdapters.KorisniksTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSRezervacijeTableAdapters.RezervacijaSobesTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSRezervacijeTableAdapters.SobasTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSRezervacijeTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSRezervacijeTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSZaduzenjeKljucaTableAdapters.KljucsTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSZaduzenjeKljucaTableAdapters.SobasTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSZaduzenjeKljucaTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSZaduzenjeKljucaTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSZaduzenjeKljucaTableAdapters.ZaduzenjeKljucasTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSZaposleniciTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSZaposleniciTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSZaposleniciTableAdapters.ZaposleniksTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSZaposlenikUlogeTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSZaposlenikUlogeTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSZaposlenikUlogeTableAdapters.viewZaposlenikUlogaTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_KljucTableAdapters.KljucsTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_KljucTableAdapters.KorisniksTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_KljucTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_KljucTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_KljucTableAdapters.ZaduzenjeKljucasTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_RodjendanTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_RodjendanTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_RodjendanTableAdapters.view_Rodjendan1TableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_StudentikusTableAdapters.DesavanjasTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_StudentikusTableAdapters.KorisniksTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_StudentikusTableAdapters.RezervacijaSobesTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_StudentikusTableAdapters.SobasTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_StudentikusTableAdapters.StudentsTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_StudentikusTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_StudentikusTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.GostiiPet_DSTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.GostiiPet_DSTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.GostiiPet_DSTableAdapters.view_KorisniciPet1TableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.KljuccDSTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.KljuccDSTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.KljuccDSTableAdapters.view_KljucDatum1TableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.Neupotrebljivi_InventariTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.Neupotrebljivi_InventariTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.Neupotrebljivi_InventariTableAdapters.view_InventarZaposlenik2TableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.ObrociDanas1TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.ObrociDanas1TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.ObrociDanas1TableAdapters.usp_ObrociDanasTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.Rezervacija_DSTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.Rezervacija_DSTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.Rezervacija_DSTableAdapters.view_Rezervacije1TableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.si001_RezervacijeTKMMDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.si001_RezervacijeTKMMDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.si001_RezervacijeTKMMDataSetTableAdapters.view_RezervacijeTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.si001_studentDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.si001_studentDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.si001_studentDataSetTableAdapters.viewStudentTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.StudentsTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.StudentsTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.StudentsTableAdapters.view1TableAdapter.datasource" />
+    <None Include="Properties\DataSources\Students.datasource" />
+    <None Include="Properties\DataSources\Students.view1DataTable.datasource" />
+    <None Include="Properties\DataSources\Students.view1Row.datasource" />
+    <None Include="Properties\DataSources\Students.view1RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\Students.view1RowChangeEventHandler.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Rezervacija_DS.xsc">
+      <DependentUpon>Rezervacija_DS.xsd</DependentUpon>
+    </None>
+    <None Include="Rezervacija_DS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Rezervacija_DS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Rezervacija_DS.xss">
+      <DependentUpon>Rezervacija_DS.xsd</DependentUpon>
+    </None>
+    <None Include="si001_RezervacijeTKMMDataSet.xsc">
+      <DependentUpon>DS_RezervacijeTKM</DependentUpon>
+    </None>
+    <None Include="DS_RezervacijeTKM">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_RezervacijeTKM.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="si001_RezervacijeTKMMDataSet.xss">
+      <DependentUpon>DS_RezervacijeTKM</DependentUpon>
+    </None>
+    <None Include="si001_studentDataSet.xsc">
+      <DependentUpon>si001_studentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="si001_studentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>si001_studentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="si001_studentDataSet.xss">
+      <DependentUpon>si001_studentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Students.xsc">
+      <DependentUpon>Students.xsd</DependentUpon>
+    </None>
+    <None Include="Students.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Students.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Students.xss">
+      <DependentUpon>Students.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

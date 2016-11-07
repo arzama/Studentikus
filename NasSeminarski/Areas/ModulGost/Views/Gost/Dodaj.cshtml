@@ -1,0 +1,73 @@
+﻿@using System
+@using System.Collections.Generic
+@using System.IdentityModel
+@using NasSeminarski.Models
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Rezervisi</title>
+</head>
+<body>
+    <h1><b>Studentski hotel "Studentikus"</b></h1>
+    <h2><b>Rezervacija sobe</b></h2>
+    <div>
+        <form action="/ModulGost/Gost/Snimi"/>
+        <table>
+            <tr>
+                <th>Naziv</th>
+                <td>
+                    <input id="nazivInput" type="text" name="naziv" />
+                </td>
+            </tr>
+            <tr>
+                <th>Datum prijave</th>
+                <td>
+                    <input id="prijavaInput" type="datetime" name="datumPrijave" />
+                </td>
+            </tr>
+            <tr>
+                <th>Datum odjave</th>
+                <td>
+                    <input id="odjavaInput" type="datetime" name="datumOdjave" />
+                </td>
+            </tr>
+            <tr>
+                <th>Soba</th>
+                <td>
+                    <input id="sobaInput" type="text" name="soba" />
+                </td>
+            </tr>
+            <tr>
+                <th>Recepcioner</th>
+                <td>
+                    <input id="recepcionerInput" type="text" name="recepcioner" />
+                </td>
+            </tr>
+            <tr>
+                <th>Ime</th>
+                <td>
+                    <input id="imeInput" type="text" name="ime" />
+                </td>
+            </tr>
+            <tr>
+                <th>Prezime</th>
+                <td>
+                    <input id="prezimeInput" type="text" name="prezime" />
+                </td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>
+                    <input id="emailInput" type="text" name="email" />
+                </td>
+            </tr>
+        </table>
+        <input id="btnSpasi" type="submit" value="Sačuvaj" />
+    </div>
+</body>
+</html>

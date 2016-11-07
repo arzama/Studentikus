@@ -1,0 +1,40 @@
+﻿@{
+    //Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dodaj</title>
+</head>
+<body>
+    <h1><b>Studentski hotel "Studentikus"</b></h1>
+    <h2><b>Upravljanje rezervacijama restorana</b></h2>
+    <div>
+        <form action="/ModulRecepcioner/Restorani/Snimi">
+            <table>
+                <thead>
+                    Naziv rezervacije
+                    <input type="text" name="Naziv" />
+                    </br>
+                    Ime gosta
+                    <input type="text" name="Ime" />
+                    </br>
+                    Prezime gosta
+                    <input type="text" name="Prezime" />
+                    </br>
+                    Cijena rezervacije
+                    <input type="text" name="Cijena" />
+                    </br>
+                    Ukupni iznos rezervacije
+                    <input type="text" name="Iznos" />
+                    </br>
+                    <input type="submit" value="Sačuvaj" />
+                </thead>
+            </table>
+
+        </form>
+
+

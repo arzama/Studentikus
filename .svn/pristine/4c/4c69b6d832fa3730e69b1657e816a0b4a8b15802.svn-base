@@ -1,0 +1,46 @@
+﻿@using NasSeminarski.Models
+@model NasSeminarski.Areas.ModulRacunovodja.Controllers.TroskoviController.UrediVM
+</br>
+<h2 style="color:darksalmon"><b>EVIDENCIJA TROŠKOVA HOTELA</b></h2>
+<br />
+
+@using (Html.BeginForm("Snimi", "Troskovi"))
+{
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        <label>Svrha troska</label>
+        @Html.TextBoxFor(model => model.svrhaTroska, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.svrhaTroska)
+
+
+    </div>
+    <div class="form-group">
+        <label>Iznos troška</label>
+        @Html.TextBoxFor(model => model.iznosTroska, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.iznosTroska)
+
+
+
+
+    </div>
+    <div class="form-group">
+        <label>Rok isplate troška</label>
+        @Html.TextBoxFor(model => model.rokIsplate, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.rokIsplate)
+
+
+
+
+    </div>
+
+    <div class="form-group">
+        <label>Uplaceno</label>
+        @Html.CheckBoxFor(model => model.uplaceno, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.ValidationSummary()
+    </div>
+    <input type="submit" value="Snimi" class="btn btn-danger" />
+}
+

@@ -1,0 +1,47 @@
+﻿@using NasSeminarski.Models
+@model System.Collections.Generic.List<NasSeminarski.Models.Plata>
+
+<h2 style="color:darksalmon"><b>Evidencija plata</b></h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Zaposlenik</th>
+            <th>Iznos plate</th>
+            <th>Rok isplate</th>
+            <th>Isplaceno</th>
+            <th>Akcija</th>
+
+
+
+        </tr>
+    </thead>
+    @foreach (Plata x in Model)
+    {
+
+        <tr>
+
+            <td>@x.Zaposlenik.Korisnik.Ime @x.Zaposlenik.Korisnik.Prezime</td>
+            <td>@x.IznosPlate</td>
+            <td>@x.RokIsplate</td>
+            <td>@x.Isplaceno</td>
+
+            <td>
+
+
+
+                @Html.ActionLink("Uredi", "Uredi", new { plataId = @x.Id }, new { @class = "btn btn-danger" })
+
+
+            </td>
+
+
+        </tr>
+    }
+</table>
+
+<td>
+    @Html.ActionLink("DODAJ NOVU EVIDENCIJU PLATE", "Dodaj", new { }, new { @class = "btn btn-danger" })
+</td>
+
+
+

@@ -1,0 +1,50 @@
+﻿@using NasSeminarski.Models
+@model NasSeminarski.Areas.ModulRecepcioner.Controllers.ObrokController.UrediVM
+
+<h1 style="color:darksalmon"><b>Evidencija obroka</b></h1>
+<br />
+<br />
+@using (Html.BeginForm("Snimi", "Obrok"))
+{
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        <label>Student</label>
+        @Html.DropDownListFor(model => model.studentId, Model.StudentStavka, new { @class = "form-control"})
+         @Html.ValidationMessageFor(model => model.studentId)
+
+
+    </div>
+
+    <div class="form-group">
+        <label>Datum</label>
+        @Html.TextBoxFor(model => model.Datum, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Datum)
+
+
+
+    </div>
+
+    <div class="form-group">
+        <label>Broj obroka</label>
+        @Html.TextBoxFor(model => model.BrojObroka, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.BrojObroka)
+
+
+
+    </div>
+    <div class="form-group">
+        <label>Uplaceno</label>
+        @Html.CheckBoxFor(model => model.uplaceno, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.uplaceno)
+
+
+
+    </div>
+
+    <div>
+        @Html.ValidationSummary()
+    </div>
+    <input type="submit" value="Snimi" class="btn btn-danger" />
+}
+

@@ -1,0 +1,65 @@
+﻿@using NasSeminarski.Models
+@model NasSeminarski.Areas.ModulRecepcioner.Controllers.DesavanjaController.UrediVM
+
+<br />
+<br />
+<h1 style="color:darksalmon"><b>Evidencija dešavanja u studentskom hotelu</b></h1>
+
+@using (Html.BeginForm("Snimi", "Desavanja"))
+{
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        <label>Naziv dešavanja</label>
+        @Html.TextBoxFor(model => model.Naziv, new { @class = "form-control" })
+         @Html.ValidationMessageFor(model => model.Naziv)
+    </div>
+
+    <div class="form-group">
+        <label>Datum</label>
+        @Html.TextBoxFor(model => model.Datum, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Datum)
+     
+    </div>
+    <div class="form-group">
+        <label>Opis dešavanja</label>
+        @Html.TextBoxFor(model => model.Opis, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Opis)
+
+    </div>
+    <div class="form-group">
+        <label>Ime gosta</label>
+        @Html.TextBoxFor(model => model.Ime, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Ime)
+
+    </div>
+    <div class="form-group">
+        <label>Prezime gosta</label>
+        @Html.TextBoxFor(model => model.Prezime, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Prezime)
+
+    </div>
+    <div class="form-group">
+        <label>Broj telefona</label>
+        @Html.TextBoxFor(model => model.BrojTelefona, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.BrojTelefona)
+
+    </div>
+    <div class="form-group">
+        <label>Otkazano</label>
+        @Html.CheckBoxFor(model => model.Otkazano, new { @class = "form-control" })
+
+    </div>
+
+
+
+
+
+
+
+    <div>
+        @Html.ValidationSummary()
+    </div>
+    <input type="submit" value="Snimi" class="btn btn-danger" />
+}
+

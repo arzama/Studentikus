@@ -1,0 +1,3 @@
+﻿@{
+    Layout = "~/Areas/ModulRacunovodja/Views/Shared/_Layout.cshtml";
+}

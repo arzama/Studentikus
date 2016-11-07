@@ -1,0 +1,24 @@
+﻿@{
+    //Layout = null;
+}
+
+<br />
+<br />
+<h3 style="color:darksalmon"><b>EVIDENCIJA PLATA</b></h3>
+<br />
+<a href="/ModulRacunovodja/Plata/Prikazi" class="btn btn-default btn-lg" style="color:darksalmon">
+    <span class=" glyphicon glyphicon-list-alt" aria-hidden="true">
+    </span>
+
+    Prikaži evidentirane plate zaposlenika
+</a>
+</br>
+</br>
+</br>
+
+<a href="/ModulRacunovodja/Plata/Dodaj" class="btn btn-default btn-lg" style="color:darksalmon">
+    <span class="glyphicon glyphicon-th-list " aria-hidden="true">
+    </span>
+
+    Dodaj novu platu zaposleniku
+</a>

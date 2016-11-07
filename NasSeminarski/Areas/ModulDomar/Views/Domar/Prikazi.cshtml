@@ -1,0 +1,54 @@
+﻿@using NasSeminarski.Models
+@model System.Collections.Generic.List<NasSeminarski.Models.Inventar>
+
+<h1 style="color:darksalmon"><b>Evidencija inventara</b></h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Naziv</th>
+            <th>Opis</th>
+            <th>Cijena</th>
+            <th>Upotrebljivo</th>
+
+            <th>Soba</th>
+            <th>Zaposlenik</th>
+
+
+        </tr>
+    </thead>
+
+    @foreach (Inventar x in Model)
+    {
+
+        <tr>
+
+            <td>@x.Naziv</td>
+            <td>@x.Opis</td>
+
+
+            <td>@x.Cijena</td>
+            <td>@x.Upotrebljivo</td>
+
+
+            <td>@x.Soba.BrojSobe</td>
+            <td>@x.Zaposlenik.Korisnik.Ime @x.Zaposlenik.Korisnik.Prezime</td>
+
+            <td>
+
+
+
+                @Html.ActionLink("Uredi", "Uredi", new { inventarID = @x.Id }, new { @class = "btn btn-danger" })
+
+
+            </td>
+
+
+        </tr>
+    }
+</table>
+
+<td>
+    @Html.ActionLink("DODAJ NOVI INVENTAR", "Dodaj", new { }, new { @class = "btn btn-danger" })
+</td>
+
+

@@ -1,0 +1,58 @@
+﻿@using NasSeminarski.DAL
+@using NasSeminarski.Areas.ModulUprava.Models
+@model List<NasSeminarski.Areas.ModulUprava.Controllers.UgovorController.IndexVM>
+
+
+
+<h2 style="color:darkslategrey">
+
+    Evidencija ugovora o stanovanju
+</h2>
+<br />
+<a href="/ModulUprava/Ugovor/Dodaj" class="btn btn-success">
+    <span class=" glyphicon glyphicon-plus" aria-hidden="true">
+    </span>
+    Dodaj novi ugovor
+</a>
+
+<br/>
+<br/>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Datum</th>
+            <th>Student</th>
+            <th>Broj kartice</th>
+           <th>Soba</th>
+            <th>Školska godina</th>
+            <th>Akcija</th>
+
+        </tr>
+    </thead>
+
+    @foreach ( NasSeminarski.Areas.ModulUprava.Controllers.UgovorController.IndexVM x in Model)
+    {
+
+        <tr>
+
+            <td>@x.Datum.ToString("dd-MM-yyy")</td>
+            <td>@x.StudentIme @x.StudentPrezime</td>
+            <td>@x.BrojKartice</td>
+           <td>@x.BrojSobe</td>
+            <td>@x.Godina</td>
+
+
+            <td>
+
+
+                @Html.ActionLink("Uredi", "Uredi", new { Id = @x.Id}, new { @class = "btn btn-info btn-sm" })
+               
+
+            </td>
+
+
+        </tr>
+    }
+</table>

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Studentikus_UI", "Studentikus_UI\Studentikus_UI.csproj", "{006F3F6A-E23D-4EF3-82B9-2487E20BBABB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Studentikus_DAL", "Studentikus_DAL\Studentikus_DAL.csproj", "{C150DCD8-4CA7-4D5D-A11D-1443B34C2E00}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{006F3F6A-E23D-4EF3-82B9-2487E20BBABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{006F3F6A-E23D-4EF3-82B9-2487E20BBABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{006F3F6A-E23D-4EF3-82B9-2487E20BBABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{006F3F6A-E23D-4EF3-82B9-2487E20BBABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C150DCD8-4CA7-4D5D-A11D-1443B34C2E00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C150DCD8-4CA7-4D5D-A11D-1443B34C2E00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C150DCD8-4CA7-4D5D-A11D-1443B34C2E00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C150DCD8-4CA7-4D5D-A11D-1443B34C2E00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

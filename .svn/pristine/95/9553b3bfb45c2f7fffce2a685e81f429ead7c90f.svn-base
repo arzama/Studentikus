@@ -1,0 +1,22 @@
+﻿
+<li class="caption-menu">Gost</li>
+
+
+
+<li>
+
+    <a href="@Url.Action("Prikazi", "Rezervacija", new { Area = "ModulGost" })"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Rezervacije soba</span></a>
+</li>
+
+<li>
+
+    <a href="@Url.Action("Prikazi", "RezervacijaRestorana", new { Area = "ModulGost" })"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Rezervacije restorana</span></a>
+</li>
+<li>
+
+    <a href="@Url.Action("Prikazi", "RezervacijaSale", new { Area = "ModulGost" })"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Rezervacije sale</span></a>
+</li>
+<li>
+
+    <a href="@Url.Action("Prikazi", "Recenzije", new { Area = "ModulGost" })"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Ostavi recenziju</span></a>
+</li>

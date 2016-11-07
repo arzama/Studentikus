@@ -1,0 +1,24 @@
+﻿@{
+    // Layout = null;
+    ViewBag.Title = "Studentski hotel Studentikus";
+
+}
+
+<br />
+<br />
+<h1 style="color:darksalmon"><b>EVIDENCIJA DEŠAVANJA U HOTELU</b></h1>
+<br />
+<a href="/ModulRecepcioner/Desavanja/Dodaj" class="btn btn-default btn-lg" style="color:darksalmon">
+    <span class="glyphicon glyphicon-th-list " aria-hidden="true">
+    </span>
+
+    Evidentiraj novo dešavanje u hotelu
+</a>
+<br />
+<br />
+<a href="/ModulRecepcioner/Desavanja/Prikazi" class="btn btn-default btn-lg" style="color:darksalmon">
+    <span class=" glyphicon glyphicon-list-alt" aria-hidden="true">
+    </span>
+
+    Prikaži evidentirana dešavanja u hotelu
+</a>

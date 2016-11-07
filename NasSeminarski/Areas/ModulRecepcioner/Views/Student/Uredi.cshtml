@@ -1,0 +1,74 @@
+﻿@using System
+@using System.Collections.Generic
+@using System.IdentityModel
+@using NasSeminarski.Models
+
+@model NasSeminarski.Areas.ModulRecepcioner.Models.StudentUrediViewModel
+
+<h3 style="color:darkred"><b>Evidencija studenata</b></h3>
+
+@using (Ajax.BeginForm("Snimi", "Student", new AjaxOptions(){UpdateTargetId="div2"}))
+{
+@Html.HiddenFor(model => model.Id)
+
+
+
+<div class="form-group">
+    <label>Ime</label>
+    @Html.TextBoxFor(model => model.Ime, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Ime)
+</div>
+<div class="form-group">
+    <label>Prezime</label>
+    @Html.TextBoxFor(model => model.Prezime, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Prezime)
+   
+</div>
+<div class="form-group">
+    <label>Datum rođenja</label>
+    @Html.TextBoxFor(model => model.DatumRodjenja, new { @class = "form-control" })
+
+</div>
+<div class="form-group">
+    <label>Adresa</label>
+    @Html.TextBoxFor(model => model.Adresa, new { @class = "form-control" })
+
+</div>
+<div class="form-group">
+    <label>Email</label>
+    @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Email)
+</div>
+<div class="form-group">
+    <label>Kontakt</label>
+    @Html.TextBoxFor(model => model.Kontakt, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Kontakt)
+
+</div>
+<div class="form-group">
+    <label>Korisničko ime</label>
+    @Html.TextBoxFor(model => model.KorisnickoIme, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.KorisnickoIme)
+</div>
+<div class="form-group">
+    <label>Lozinka</label>
+    @Html.TextBoxFor(model => model.Lozinka, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Lozinka)
+</div>
+
+
+<div class="form-group">
+    <label>Naziv fakulteta</label>
+    @Html.TextBoxFor(model => model.Fakultet, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Fakultet)
+
+</div>
+
+<div class="form-group">
+    <label>Datum useljenja</label>
+    @Html.TextBoxFor(model => model.DatumUseljenja, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.DatumUseljenja)
+</div>
+
+<input type="submit" value="Sačuvaj" class="btn btn-danger" />
+}

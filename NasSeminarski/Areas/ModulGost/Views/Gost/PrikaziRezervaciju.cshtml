@@ -1,0 +1,53 @@
+﻿@using System
+@using System.Collections.Generic
+@using System.IdentityModel
+@using NasSeminarski.Models
+
+@model NasSeminarski.Areas.ModulGost.Models.RezervacijaPrikaziViewModel
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PrikaziRezervaciju</title>
+</head>
+<body>
+
+    <h2><b>Rezervacije</b></h2>
+    <div> 
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Datum prijave</th>
+                    <th>Datum odjave</th>
+                    <th>Broj sobe</th>
+                    <th>Iznos</th>
+                    <th>Akcija</th>
+                </tr>
+            </thead>
+            @foreach (NasSeminarski.Areas.ModulGost.Models.RezervacijaPrikaziViewModel.Rezervacije x in Model.rezervacije)
+            {
+                <tr>
+                    <td>@x.DatumPrijave.Value.ToShortDateString()</td>
+                    <td>@x.DatumOdjave.Value.ToShortDateString()</td>
+                    <td>@x.BrojSobe</td>
+                    <td>@x.Iznos KM</td>
+
+                    <td>  @Html.ActionLink("Otkaži", "Ponisti", new { raId = @x.rezervacijaId }, new { @class = "btn btn-danger btn-sm" })</td>
+                </tr>
+            }
+        </table>
+
+    </div>
+    <br />
+    <br />
+    <a href="/ModulGost/Gost" class="btn btn-default btn-sm">
+        <span class=" glyphicon glyphicon-home" aria-hidden="true">
+        </span>
+
+       Vrati se na početnu
+    </a>
+</body>
+</html>

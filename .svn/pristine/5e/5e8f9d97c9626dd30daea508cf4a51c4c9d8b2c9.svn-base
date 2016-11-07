@@ -1,0 +1,20 @@
+﻿@{
+    //Layout = null;
+}
+<br />
+<br />
+<h4><b>Upravljanje ulogama</b></h4>
+
+<br />
+<a href="/ModulUprava/Uloga/Prikazi" class="btn btn-default btn-lg">
+    <span class=" glyphicon glyphicon-list-alt" aria-hidden="true">
+    </span>
+    Prikaži uloge
+</a>
+
+<a href="/ModulUprava/Uloga/Dodaj" class="btn btn-default btn-lg">
+    <span class=" glyphicon glyphicon-plus" aria-hidden="true">
+    </span>
+    Dodaj novu ulogu
+</a>
+

@@ -1,0 +1,39 @@
+﻿@using System
+@using System.Collections.Generic
+@using System.IdentityModel
+@using NasSeminarski.Models
+
+@model NasSeminarski.Areas.ModulGost.Models.RezervacijaUrediViewModel
+
+
+<h2><b>Rezervacije</b></h2>
+
+<form action="/ModulGost/Gost/Snimi" />
+@Html.HiddenFor(model => model.Id)
+
+
+
+<div class="form-group">
+    <label>Datum prijave</label>
+    @Html.TextBoxFor(model => model.DatumPrijave, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.DatumPrijave)
+</div>
+
+<div class="form-group">
+    <label>Datum odjave</label>
+    @Html.TextBoxFor(model => model.DatumOdjave, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.DatumOdjave)
+</div>
+
+<div class="form-group">
+    <label>Broj sobe</label>
+    @Html.TextBoxFor(model=>model.BrojSobe, new { @class = "form-control", @readonly=true })
+    @Html.ValidationMessageFor(model => model.BrojSobe)
+</div>
+
+
+<div>
+    @Html.ValidationSummary()
+</div>
+
+<input type="submit" value="Sačuvaj" />

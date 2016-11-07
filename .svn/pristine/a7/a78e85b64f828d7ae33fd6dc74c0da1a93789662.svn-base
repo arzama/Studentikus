@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ObrociDanas1" targetNamespace="http://tempuri.org/ObrociDanas1.xsd" xmlns:mstns="http://tempuri.org/ObrociDanas1.xsd" xmlns="http://tempuri.org/ObrociDanas1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="si001_studentConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="si001_studentConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Studentikus_UI.Properties.Settings.GlobalReference.Default.si001_studentConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="usp_ObrociDanasTableAdapter" GeneratorDataComponentClassName="usp_ObrociDanasTableAdapter" Name="usp_ObrociDanas" UserDataComponentName="usp_ObrociDanasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="si001_studentConnectionString1 (Settings)" DbObjectName="si001_student.si001_student.usp_ObrociDanas" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Ime, Prezime, BrojKartice, Vrijeme FROM si001_student.usp_ObrociDanas</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Ime" DataSetColumn="Ime" />
+              <Mapping SourceColumn="Prezime" DataSetColumn="Prezime" />
+              <Mapping SourceColumn="BrojKartice" DataSetColumn="BrojKartice" />
+              <Mapping SourceColumn="Vrijeme" DataSetColumn="Vrijeme" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ObrociDanas1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ObrociDanas1" msprop:Generator_UserDSName="ObrociDanas1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="usp_ObrociDanas" msprop:Generator_TableClassName="usp_ObrociDanasDataTable" msprop:Generator_TableVarName="tableusp_ObrociDanas" msprop:Generator_TablePropName="usp_ObrociDanas" msprop:Generator_RowDeletingName="usp_ObrociDanasRowDeleting" msprop:Generator_RowChangingName="usp_ObrociDanasRowChanging" msprop:Generator_RowEvHandlerName="usp_ObrociDanasRowChangeEventHandler" msprop:Generator_RowDeletedName="usp_ObrociDanasRowDeleted" msprop:Generator_UserTableName="usp_ObrociDanas" msprop:Generator_RowChangedName="usp_ObrociDanasRowChanged" msprop:Generator_RowEvArgName="usp_ObrociDanasRowChangeEvent" msprop:Generator_RowClassName="usp_ObrociDanasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ime" msprop:Generator_ColumnVarNameInTable="columnIme" msprop:Generator_ColumnPropNameInRow="Ime" msprop:Generator_ColumnPropNameInTable="ImeColumn" msprop:Generator_UserColumnName="Ime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Prezime" msprop:Generator_ColumnVarNameInTable="columnPrezime" msprop:Generator_ColumnPropNameInRow="Prezime" msprop:Generator_ColumnPropNameInTable="PrezimeColumn" msprop:Generator_UserColumnName="Prezime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BrojKartice" msprop:Generator_ColumnVarNameInTable="columnBrojKartice" msprop:Generator_ColumnPropNameInRow="BrojKartice" msprop:Generator_ColumnPropNameInTable="BrojKarticeColumn" msprop:Generator_UserColumnName="BrojKartice" type="xs:int" />
+              <xs:element name="Vrijeme" msprop:Generator_ColumnVarNameInTable="columnVrijeme" msprop:Generator_ColumnPropNameInRow="Vrijeme" msprop:Generator_ColumnPropNameInTable="VrijemeColumn" msprop:Generator_UserColumnName="Vrijeme" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

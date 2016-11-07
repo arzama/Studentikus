@@ -1,0 +1,26 @@
+﻿@using System
+@using System.Collections.Generic
+@using System.IdentityModel
+@using NasSeminarski.Models
+
+@model NasSeminarski.Areas.ModulGost.Models.RecenzijeUrediVM
+@*@{Layout = null;}*@
+
+<form action="/ModulGost/Recenzije/Snimi" />
+@Html.HiddenFor(model => model.Id)
+@*@using (Ajax.BeginForm("Snimi", "Recenzije", new AjaxOptions { UpdateTargetId = "div" }))
+{
+    @Html.HiddenFor(model=>model.Id)*@
+<div class="form-group">
+    <label>Hvala na povjerenju ! </label>
+    <label>Ostavite komentar</label>
+    @Html.TextBoxFor(model => model.Komentar, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Komentar)
+
+</div>
+
+<div>
+    @Html.ValidationSummary()
+</div>
+
+<input type="submit" value="Sačuvaj" class="btn btn-success" />

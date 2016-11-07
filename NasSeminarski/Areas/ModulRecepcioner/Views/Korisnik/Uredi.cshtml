@@ -1,0 +1,83 @@
+﻿@using NasSeminarski.Models
+@model NasSeminarski.Areas.ModulRecepcioner.Controllers.KorisnikController.UrediVM
+<br />
+<br />
+<h1 style="color:darksalmon"><b>Evidencija korisnika studentskog hotela</b></h1>
+
+@using (Html.BeginForm("Snimi", "Korisnik"))
+{
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        <label>Uloga</label>
+        @Html.DropDownListFor(model => model.UlogaId, Model.UlogaStavka, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.UlogaId)
+
+
+    </div>
+    <div class="form-group">
+        <label>Ime</label>
+        @Html.TextBoxFor(model => model.Ime, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Ime)
+
+
+    </div>
+
+    <div class="form-group">
+        <label>Prezime</label>
+        @Html.TextBoxFor(model => model.Prezime, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Prezime)
+
+
+    </div>
+    <div class="form-group">
+        <label>Datum rodjenja</label>
+        @Html.TextBoxFor(model => model.DatumRodjenja, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.DatumRodjenja)
+
+
+    </div>
+    <div class="form-group">
+        <label>Adresa</label>
+        @Html.TextBoxFor(model => model.Adresa, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Adresa)
+
+
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Email)
+
+
+    </div>
+    <div class="form-group">
+        <label>Kontakt</label>
+        @Html.TextBoxFor(model => model.Kontakt, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Kontakt)
+
+
+    </div>
+    <div class="form-group">
+        <label>Korisnicko ime</label>
+        @Html.TextBoxFor(model => model.KorisnickoIme, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.KorisnickoIme)
+
+
+    </div>
+    <div class="form-group">
+        <label>Lozinka</label>
+        @Html.TextBoxFor(model => model.Lozinka, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Lozinka)
+
+
+    </div>
+    
+
+
+    <div>
+        @Html.ValidationSummary()
+    </div>
+    <input type="submit" value="Snimi" class="btn btn-danger" />
+}
+

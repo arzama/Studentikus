@@ -1,0 +1,62 @@
+﻿@using System
+@using System.Collections.Generic
+@using System.IdentityModel
+@using NasSeminarski.Models
+
+@model NasSeminarski.Areas.ModulRecepcioner.Models.StudentPrikaziViewModel
+<h2><b>Upravljanje studentima</b></h2>
+<br />
+<div>
+    <h5><b>UNESITE IME I PREZIME STUDENTA</b></h5>
+    @using (Html.BeginForm("Prikazi", "Student", FormMethod.Get))
+    {
+        @Html.TextBox("search")
+        <input type="submit" value="Pretraga" class="btn btn-success" />
+
+    }
+
+</div>
+<br />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            
+          
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Datum rodjenja</th>
+            <th>Adresa</th>
+            <th>Email</th>
+             <th>Kontakt</th>
+            <th>Fakultet</th>
+            <th>Datum useljenja</th>
+            <th>Akcija</th>
+
+
+        </tr>
+    </thead>
+    @foreach (Student x in Model.studenti)
+    {
+        <tr>
+            
+
+            <th>@x.Korisnik.Ime</th>
+            <th>@x.Korisnik.Prezime</th>
+            <th>@x.Korisnik.DatumRodjenja</th>
+
+            <th>@x.Korisnik.Adresa</th>
+            <th>@x.Korisnik.Email</th>
+            <th>@x.Korisnik.Kontakt</th>
+            <th>@x.Fakultet</th>
+            <th>@x.DatumUseljenja</th>
+            <td>
+                @Html.ActionLink("Uredi", "Uredi", new { studentID = x.Id },  new { @class = "btn btn-danger"})
+
+            </td>
+  
+
+        </tr>
+
+    }
+</table>
+@Html.ActionLink("DODAJ NOVOG STUDENTA", "Dodaj", new { },  new { @class = "btn btn-danger"})

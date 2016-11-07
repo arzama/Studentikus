@@ -1,0 +1,44 @@
+﻿@model NasSeminarski.Areas.ModulUprava.Controllers.KorisnikController.IndexVM
+@{Layout = null;}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Datum rođenja</th>
+            <th>Adresa</th>
+            <th>Email</th>
+            <th>Kontakt</th>
+            <th>Korisnicko ime</th>
+            <th>Lozinka</th>
+        </tr>
+    </thead>
+
+    @foreach (NasSeminarski.Models.Korisnik x in Model.Korisnik)
+    {
+        <tr>
+
+            <td>@x.Ime</td>
+            <td>@x.Prezime</td>
+            <td>@x.DatumRodjenja.Value.ToString("dd-MM-yyyy")</td>
+            <td>@x.Adresa</td>
+            <td>@x.Email</td>
+            <td>@x.Kontakt</td>
+            <td>@x.KorisnickoIme</td>
+            <td>@x.Lozinka</td>
+            <td>
+                @Ajax.ActionLink("Uredi", "Uredi", new { korisnikId = x.Id }, new AjaxOptions { UpdateTargetId = "div" }, new { @class = "btn btn-warning btn-sm" })
+             
+
+
+
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+@Ajax.ActionLink("Dodaj novi", "Dodaj", new { ulogaId= Model.UlogaId }, new AjaxOptions { UpdateTargetId = "div" }, new { @class = "btn btn-success btn-sm" })
+

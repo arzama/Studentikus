@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Students" targetNamespace="http://tempuri.org/Students.xsd" xmlns:mstns="http://tempuri.org/Students.xsd" xmlns="http://tempuri.org/Students.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="si001_studentConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="si001_studentConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Studentikus_UI.Properties.Settings.GlobalReference.Default.si001_studentConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view1TableAdapter" GeneratorDataComponentClassName="view1TableAdapter" Name="view1" UserDataComponentName="view1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="si001_studentConnectionString (Settings)" DbObjectName="si001_student.si001_student.view1" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DatumUseljenja, Fakultet, Ime, Prezime, DatumRodjenja, Adresa, Email FROM si001_student.view1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DatumUseljenja" DataSetColumn="DatumUseljenja" />
+              <Mapping SourceColumn="Fakultet" DataSetColumn="Fakultet" />
+              <Mapping SourceColumn="Ime" DataSetColumn="Ime" />
+              <Mapping SourceColumn="Prezime" DataSetColumn="Prezime" />
+              <Mapping SourceColumn="DatumRodjenja" DataSetColumn="DatumRodjenja" />
+              <Mapping SourceColumn="Adresa" DataSetColumn="Adresa" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Students" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Students" msprop:Generator_UserDSName="Students">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="view1" msprop:Generator_TableClassName="view1DataTable" msprop:Generator_TableVarName="tableview1" msprop:Generator_TablePropName="view1" msprop:Generator_RowDeletingName="view1RowDeleting" msprop:Generator_RowChangingName="view1RowChanging" msprop:Generator_RowEvHandlerName="view1RowChangeEventHandler" msprop:Generator_RowDeletedName="view1RowDeleted" msprop:Generator_UserTableName="view1" msprop:Generator_RowChangedName="view1RowChanged" msprop:Generator_RowEvArgName="view1RowChangeEvent" msprop:Generator_RowClassName="view1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DatumUseljenja" msprop:Generator_ColumnVarNameInTable="columnDatumUseljenja" msprop:Generator_ColumnPropNameInRow="DatumUseljenja" msprop:Generator_ColumnPropNameInTable="DatumUseljenjaColumn" msprop:Generator_UserColumnName="DatumUseljenja" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Fakultet" msprop:Generator_ColumnVarNameInTable="columnFakultet" msprop:Generator_ColumnPropNameInRow="Fakultet" msprop:Generator_ColumnPropNameInTable="FakultetColumn" msprop:Generator_UserColumnName="Fakultet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ime" msprop:Generator_ColumnVarNameInTable="columnIme" msprop:Generator_ColumnPropNameInRow="Ime" msprop:Generator_ColumnPropNameInTable="ImeColumn" msprop:Generator_UserColumnName="Ime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Prezime" msprop:Generator_ColumnVarNameInTable="columnPrezime" msprop:Generator_ColumnPropNameInRow="Prezime" msprop:Generator_ColumnPropNameInTable="PrezimeColumn" msprop:Generator_UserColumnName="Prezime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DatumRodjenja" msprop:Generator_ColumnVarNameInTable="columnDatumRodjenja" msprop:Generator_ColumnPropNameInRow="DatumRodjenja" msprop:Generator_ColumnPropNameInTable="DatumRodjenjaColumn" msprop:Generator_UserColumnName="DatumRodjenja" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Adresa" msprop:Generator_ColumnVarNameInTable="columnAdresa" msprop:Generator_ColumnPropNameInRow="Adresa" msprop:Generator_ColumnPropNameInTable="AdresaColumn" msprop:Generator_UserColumnName="Adresa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

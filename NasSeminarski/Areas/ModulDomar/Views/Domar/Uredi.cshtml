@@ -1,0 +1,48 @@
+﻿@using NasSeminarski.Models
+@model NasSeminarski.Areas.ModulDomar.Controllers.DomarController.UrediVM
+
+<br />
+<br />
+
+@using (Html.BeginForm("Snimi", "Domar"))
+{
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        <label>Zaposlenik</label>
+        @Html.DropDownListFor(model => model.ZaposlenikId, Model.ZaposlenikStavke, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ZaposlenikId)
+    </div>
+    <div class="form-group">
+        <label>Soba</label>
+        @Html.DropDownListFor(model => model.SobaId, Model.SobaStavke, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.SobaId)
+    </div>
+    <div class="form-group">
+        <label>Naziv</label>
+        @Html.TextBoxFor(model => model.Naziv, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Naziv)
+    </div>
+
+    <div class="form-group">
+        <label>Opis</label>
+        @Html.TextBoxFor(model => model.Opis, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Opis)
+    </div>
+    <div class="form-group">
+        <label>Cijena</label>
+        @Html.TextBoxFor(model => model.Cijena, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Cijena)
+    </div>
+    <div class="form-group">
+        <label>Upotrebljivo</label>
+        @Html.CheckBoxFor(model => model.Upotrebljivo, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Upotrebljivo)
+    </div>
+
+    <div>
+        @Html.ValidationSummary()
+    </div>
+    <input type="submit" value="Snimi" class="btn btn-danger" />
+}
+

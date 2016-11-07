@@ -1,0 +1,46 @@
+﻿
+
+@*@using NasSeminarski.DAL
+@using NasSeminarski.Areas.ModulUprava.Models*@
+@model NasSeminarski.Areas.ModulUprava.Controllers.DesavanjaController.PrikaziVM
+
+
+<h2 style="color:darkslategrey">
+    
+    Pregled dešavanja u hotelu
+</h2>
+<br />
+
+
+@*<div class="form-group">
+    <label class="control-label">Ukupan broj dešavanja: </label>
+    <label style="color: lightgreen">@Model.ukupanBroj</label>
+</div>*@
+
+
+<br />
+
+
+<ul class="nav nav-tabs">
+    <li class="active" ><a data-tab-history="true" data-toggle="tab" href="#prikazi">Dešavanja koja su održana</a></li>
+    <li><a data-tab-history="true" data-toggle="tab" href="#prikaziSlijedeca">Dešavanja koja se trebaju održati</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade in active" id="prikazi">
+
+        @Html.Action("Prikazi", "Desavanja", new { })
+    </div>
+    <div class="tab-pane fade" id="prikaziSlijedeca">
+    
+        @Html.Action("PrikaziSlijedeca", "Desavanja", new { })
+    </div>
+
+</div>
+<br />
+
+
+
+
+
+<br/>

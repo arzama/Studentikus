@@ -1,0 +1,107 @@
+﻿@model NasSeminarski.Areas.ModulUprava.Controllers.StudentController.UrediVM
+
+
+@using (Html.BeginForm("Snimi", "Student"))
+{
+
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-horizontal">
+        @Html.HiddenFor(model => model.Id)
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Ime, "Ime", htmlAttributes: new { @class = "control-label col-sm-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Ime, new { @class ="form-control" })
+                @Html.ValidationMessageFor(model => model.Ime)
+                </div>
+            </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Prezime, "Prezime", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Prezime, new { @class = "form-control" } )
+                @Html.ValidationMessageFor(model => model.Prezime, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DatumRodjenja, "Datum rođenja", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.DatumRodjenja, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.DatumRodjenja, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Adresa, "Adresa", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Adresa,  new { @class = "form-control"  })
+                @Html.ValidationMessageFor(model => model.Adresa, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, "E-mail", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Email,  new { @class = "form-control"  })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Kontakt, "Kontakt", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Kontakt, new { @class = "form-control"  })
+                @Html.ValidationMessageFor(model => model.Kontakt, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.KorisnickoIme, "Korisničko ime", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.KorisnickoIme,  new { @class = "form-control"  })
+                @Html.ValidationMessageFor(model => model.KorisnickoIme, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Lozinka, "Lozinka", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Lozinka, new { @class = "form-control"  })
+                @Html.ValidationMessageFor(model => model.Lozinka, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Fakultet, "Fakultet", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Fakultet, new { @class = "form-control"  })
+                @Html.ValidationMessageFor(model => model.Fakultet, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.DatumUseljenja, "Datum useljenja", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.DatumUseljenja,new { @class = "form-control"})
+                @Html.ValidationMessageFor(model => model.DatumUseljenja, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.KantonId, "Kanton", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.KantonId, Model.KantonStavke,  new { @class = "form-control"  })
+                @Html.ValidationMessageFor(model => model.KantonId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Sačuvaj" class="btn btn-default" />
+            </div>
+        </div>
+
+
+
+        </div>
+
+        }
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

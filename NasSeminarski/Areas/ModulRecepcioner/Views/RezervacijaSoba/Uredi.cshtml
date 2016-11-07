@@ -1,0 +1,76 @@
+﻿@using System
+@using System.Collections.Generic
+@using System.IdentityModel
+@using NasSeminarski.Models
+
+@model NasSeminarski.Areas.ModulRecepcioner.Models.RezervacijaSobaUrediViewModel
+
+
+<h2><b>Rezervacije</b></h2>
+
+<form action="/ModulRecepcioner/RezervacijaSoba/Snimi" />
+@Html.HiddenFor(model => model.Id)
+
+
+
+<div class="form-group">
+    <label>Datum prijave</label>
+    @Html.TextBoxFor(model => model.DatumPrijave, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.DatumPrijave)
+</div>
+
+<div class="form-group">
+    <label>Datum odjave</label>
+    @Html.TextBoxFor(model => model.DatumOdjave, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.DatumOdjave)
+</div>
+
+<div class="form-group">
+    <label>Broj sobe</label>
+    @Html.TextBoxFor(model => model.BrojSobe, new { @class = "form-control", @readonly = true })
+    @Html.ValidationMessageFor(model => model.BrojSobe)
+</div>
+
+<div class="form-group">
+    <label>Iznos</label>
+    @Html.TextBoxFor(model => model.Iznos, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    <label>Ime</label>
+    @Html.TextBoxFor(model => model.Ime, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    <label>Prezime</label>
+    @Html.TextBoxFor(model => model.Prezime, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    <label>Datum rođenja</label>
+    @Html.TextBoxFor(model => model.DatumRodjenja, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    <label>Adresa</label>
+    @Html.TextBoxFor(model => model.Adresa, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    <label>Email</label>
+    @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    <label>Kontakt</label>
+    @Html.TextBoxFor(model => model.Kontakt, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    <label>Korisničko ime</label>
+    @Html.TextBoxFor(model => model.KorisnickoIme, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    <label>Lozinka</label>
+    @Html.TextBoxFor(model => model.Lozinka, new { @class = "form-control" })
+</div>
+
+<div>
+    @Html.ValidationSummary()
+</div>
+
+<input type="submit" value="Sačuvaj" />

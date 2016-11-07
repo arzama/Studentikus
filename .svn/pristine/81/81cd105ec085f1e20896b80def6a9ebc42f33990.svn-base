@@ -1,0 +1,59 @@
+﻿@using System
+@using System.Collections.Generic
+@using System.IdentityModel
+@using NasSeminarski.Models
+@model NasSeminarski.Areas.ModulGost.Models.RecenzijePrikaziVM
+@*<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Prikaz recenzija</title>
+</head>
+<body>
+
+    <h2><b>Upravljanje recenzijama</b></h2>*@
+<a href="/ModulGost/Recenzije/Dodaj" class="btn btn-success btn-sm">
+        <span class=" glyphicon glyphicon-plus" aria-hidden="true">
+        </span>
+        Komentariši
+    </a>
+    <table class="table table-striped" style="border-bottom-color:ActiveBorder">
+        <thead>
+            <tr>
+                <td>Gost</td>
+                <th>Datum</th>
+                <th>Komentar</th>
+            
+            </tr>
+        </thead>
+
+        @foreach (NasSeminarski.Areas.ModulGost.Models.RecenzijePrikaziVM.Recenzije x in Model.recenzije)
+        {
+            <tr>
+                <td>@x.Ime @x.Prezime</td>
+                <th>@x.Datum.Value.ToShortDateString()</th>
+                <th>@x.Komentar</th>
+            
+                @*<td>
+                    @Html.ActionLink("Uredi", "Uredi", new { Id = @x.RecenzijaId }, new { @class = "btn btn-primary btn-sm" })
+
+                </td>*@
+            </tr>
+        }
+    </table>
+<div id="div"></div>
+
+    @*<a href="/ModulGost/Recenzije/Dodaj" class="btn btn-default btn-sm">
+        <span class=" glyphicon glyphicon-plus" aria-hidden="true">
+        </span>
+        Dodaj novu recenziju
+    </a>*@
+    @*@Ajax.ActionLink("Komentariši", "Dodaj", new AjaxOptions { UpdateTargetId = "div" })*@
+
+    @*</br>
+    </br>
+</body>*@
+
+@*</html>*@
+

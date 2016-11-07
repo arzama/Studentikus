@@ -1,0 +1,79 @@
+﻿@using NasSeminarski.DAL
+@using NasSeminarski.Areas.ModulUprava.Models
+@model NasSeminarski.Areas.ModulUprava.Models.ZaposlenikPrikaziViewModel
+
+
+<h2 style="color:darkslategrey">
+
+   Upravljanje zaposlenicima
+</h2>
+
+<br/>
+<a href="/ModulUprava/Zaposlenik/Dodaj" class="btn btn-success">
+    <span class=" glyphicon glyphicon-plus" aria-hidden="true">
+    </span>
+    Dodaj novog zaposlenika
+</a>
+<br/>
+<br />
+<br/>
+<form>
+    <div class="form-inline">
+        @Html.DropDownListFor(model => model.UlogaId, Model.UlogeStavke, new { @class = "form-control" })
+        <input type="submit" value="Filtiraj" class="btn btn-success btn-sm" />
+        @using (Html.BeginForm("Prikazi", "Zaposlenik", FormMethod.Get)) { 
+        @Html.TextBox("search")
+    <input type="submit" value="Pretraga" class="btn btn-success btn-sm" />
+
+        }
+    </div>
+
+</form>
+<br/>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Email</th>
+            <th>Kontakt</th>
+            
+            <th>Datum zaposlenja</th>
+           <th>Uloga</th>
+          
+
+        </tr>
+    </thead>
+
+    @foreach (ZaposlenikPrikaziViewModel.ZaposlenikInfo x in Model.zaposlenici)
+    {
+
+        <tr>
+            
+            <td>@x.Ime</td>
+            <td>@x.Prezime</td>
+          
+
+            <td>@x.Email</td>
+            <td>@x.Kontakt</td>
+            
+
+            <td>@x.DatumZaposlenja.Value.ToString("dd-MM-yyyy")</td>
+            <td>@x.UlogaNaziv</td>
+
+            <td>
+
+
+
+                @Html.ActionLink("Uredi", "Uredi", new { Id = @x.Id }, new { @class = "btn btn-info btn-sm" })
+             @Html.ActionLink("Obriši", "Obrisi", new { zId = @x.Id }, new {@class ="btn btn-danger btn-sm" })
+            
+            </td>
+        
+          
+        </tr>
+    }
+</table>
+</br>
+
+

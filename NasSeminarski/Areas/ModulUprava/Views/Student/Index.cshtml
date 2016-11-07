@@ -1,0 +1,67 @@
+﻿
+@using System
+@using System.Collections.Generic
+@using System.IdentityModel
+@using NasSeminarski.Models
+
+@model NasSeminarski.Areas.ModulUprava.Controllers.StudentController.IndexVM
+
+
+
+
+<h2 style="color:darkslategrey">
+
+    Evidencija studenata
+</h2>
+<br />
+<br />
+<a href="/ModulUprava/Student/Dodaj" class="btn btn-success">
+    <span class=" glyphicon glyphicon-plus" aria-hidden="true">
+    </span>
+    Dodaj novog studenta
+</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+
+
+       
+            <th>Ime i prezime</th>
+            <th>Kanton</th>
+            <th>Fakultet</th>
+            <th>Korisničko ime</th>
+            <th>Kontakt</th>
+            <th>Akcija</th>
+
+
+        </tr>
+    </thead>
+    @foreach (NasSeminarski.Areas.ModulUprava.Controllers.StudentController.IndexVM.StudentInfo x in Model.studenti)
+    {
+        <tr>
+
+            <td>@x.Ime @x.Prezime</td>
+           <td>@x.Kanton</td>
+            <td>@x.Fakultet</td>
+            <td>@x.KorisnickoIme</td>
+            <td>@x.Kontakt</td>
+            <td>
+
+
+                @Html.ActionLink("Uredi", "Uredi", new { studentId = @x.Id }, new { @class = "btn btn-info btn-sm" })
+            </td>
+
+            <td>
+
+
+              @Html.ActionLink("Obriši", "Obrisi", new { studentId = @x.Id }, new { @class = "btn btn-danger btn-sm" })
+  </td>
+      
+            
+
+        </tr>
+
+    }
+</table>
+<div id="div2"></div>

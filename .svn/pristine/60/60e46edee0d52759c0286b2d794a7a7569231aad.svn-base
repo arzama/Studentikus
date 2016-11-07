@@ -1,0 +1,49 @@
+﻿@using NasSeminarski.Models
+@model System.Collections.Generic.List<NasSeminarski.Models.ZaduzenjeKljuca>
+
+<h1 style="color:darksalmon"><b>Zaduženja ključeva</b></h1>
+<br />
+<br />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Ime i prezime</th>
+            <th>Broj kljuca</th>
+            <th>Datum preuzimanja</th>
+            <th>Datum vracanja</th>
+            <th>Aktivan</th>
+            <th>Akcija</th>
+
+
+
+        </tr>
+    </thead>
+    @foreach (ZaduzenjeKljuca x in Model)
+    {
+
+        <tr>
+            <td>@x.Korisnik.Ime @x.Korisnik.Prezime</td>
+            <td>@x.Kljuc.BrojKljuca</td>
+            <td>@x.DatumPreuzimanja</td>
+            <td>@x.DatumVracanja</td>
+            <td>@x.Aktivan</td>
+            <td>
+
+
+
+                @Html.ActionLink("Uredi", "Uredi", new { zaduzenjeId = @x.Id },  new { @class = "btn btn-danger"})
+
+
+            </td>
+
+
+        </tr>
+    }
+</table>
+
+<td>
+    @Html.ActionLink("DODAJ NOVO ZADUŽENJE", "Dodaj", new { },  new { @class = "btn btn-danger"})
+</td>
+
+
+

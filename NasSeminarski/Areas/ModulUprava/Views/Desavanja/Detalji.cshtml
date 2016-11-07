@@ -1,0 +1,41 @@
+﻿@model NasSeminarski.Models.Desavanja
+@{
+    Layout = null;
+}
+
+<h3 style="color:darkcyan">Detalji dešavanja</h3>
+<div class="row">
+    <div class="col-md-4">
+        <hr />
+        <table class="table table-striped" >
+            <tr>
+                <td><b>Naziv</b></td>
+                <td>@Html.DisplayFor(model => model.Naziv)</td>
+            </tr>
+            <tr>
+                <td><b>Datum rezervacije</b></td>
+                <td>@Html.DisplayFor(model => model.Datum)</td>
+            </tr>
+           <tr>
+                <td><b>Rezervisano na ime</b></td>
+                <td>@Html.DisplayFor(model => model.Ime) @Html.DisplayFor(model => model.Prezime)</td>
+            </tr>
+
+            <tr>
+                <td><b>Kontakt telefon</b></td>
+                <td>@Html.DisplayFor(model => model.BrojTelefona)</td>
+            </tr>
+
+            <tr>
+                <td><b>Zaposlenik</b></td>
+                <td>@Html.DisplayFor(model => model.Zaposlenik.Korisnik.Ime) @Html.DisplayFor(model => model.Zaposlenik.Korisnik.Prezime)</td>
+            </tr>
+            <tr>
+                <td><b>Opis</b></td>
+                <td>@Html.DisplayFor(model => model.Opis) @Html.DisplayFor(model => model.Opis)</td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+

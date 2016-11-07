@@ -1,0 +1,64 @@
+﻿@model NasSeminarski.Areas.ModulUprava.Controllers.IzvjestajController.IndexVM
+
+
+<h2 style="color:darkslategrey">
+
+    Refundisanje trošova - pregled studenata
+</h2>
+<br/>
+<form>
+    <div class="form-inline">
+        @Html.DropDownListFor(model => model.MjesecObracunaId, Model.MjesecObracunaStavke, new { @class = "form-control" })
+        @Html.DropDownListFor(model => model.KantonId, Model.KantonStavke, new { @class = "form-control" })
+        <input type="submit" value="Prikaži" class="btn btn-success" />
+    
+    </div>
+
+</form>
+<br />
+<div class="form-group">
+    <label class="control-label">Broj studenata: </label>
+    <label style="color: palevioletred">@Model.broj</label>
+</div>
+
+<br />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Student</th>
+            <th>Kanton</th>
+            <th>Adresa</th>
+            <th>Fakultet</th>
+            <th>Evidentorao zaposlenik</th>
+            
+ 
+        </tr>
+    </thead>
+
+    @foreach (NasSeminarski.Areas.ModulUprava.Controllers.IzvjestajController.IndexVM.IzvjestajInfo x in Model.izvjestaji)
+    {
+
+        <tr>
+
+            <td>@x.StudentIme @x.StudentIme</td>
+            <td>@x.KantonNaziv</td>
+            <td>@x.Adresa</td>
+            <td>@x.Fakultet</td>
+
+            <td>@x.ZaposlenikIme @x.ZaposlenikPrezime</td>
+ 
+
+
+            <td>
+
+
+                @*@Html.ActionLink("Uredi", "Uredi", new { Id = @x.Id }, new { @class = "btn btn-info btn-sm" })*@
+
+
+            </td>
+
+
+        </tr>
+    }
+</table>

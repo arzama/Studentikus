@@ -1,0 +1,49 @@
+﻿@using NasSeminarski.Models
+@model System.Collections.Generic.List<NasSeminarski.Models.Uplata>
+
+<h1 style="color:darksalmon"><b>Evidencija uplata</b></h1>
+<br />
+<table class="table table-striped">
+    <thead>
+        <tr>
+
+            <th>Ime i prezime studenta</th>
+            <th>Datum uplate</th>
+            <th>Iznos uplate</th>
+            <th>Svrha uplate</th>
+            <th>Akcija</th>
+
+
+
+        </tr>
+    </thead>
+    @foreach (Uplata x in Model)
+    {
+
+        <tr>
+
+            <td>@x.Student.Korisnik.Ime @x.Student.Korisnik.Prezime</td>
+            <td>@x.DatumUplate</td>
+            <td>@x.IznosUplate</td>
+            <td>@x.svrhaUplate</td>
+
+            <td>
+
+
+
+                @Html.ActionLink("Uredi", "Uredi", new { uplataId = @x.Id }, new { @class = "btn btn-danger" })
+
+
+            </td>
+
+
+        </tr>
+    }
+</table>
+
+<td>
+    @Html.ActionLink("DODAJ NOVU UPLATU", "Dodaj", new { }, new { @class = "btn btn-danger" })
+</td>
+
+
+

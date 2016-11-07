@@ -1,0 +1,78 @@
+﻿@using System
+@using System.Collections.Generic
+@using System.IdentityModel
+@using NasSeminarski.Models
+
+@model NasSeminarski.Areas.ModulStudent.Controllers.ObrociController.IndexVM
+<h2 style="color:darkslategrey">
+
+    Pregled obroka
+</h2>
+<br />
+<div class="form-group">
+    <label class="control-label">Broj kartice: </label>
+    <label style="color:burlywood"><h3>@Model.BrojKartice</h3></label>
+</div>
+
+<form>
+    <div class="form-inline">
+        @Html.DropDownListFor(model => model.MjesecId, Model.MjesecStavke, new { @class = "form-control" })
+       
+        <input type="submit" value="Prikaži" class="btn btn-success" />
+
+    </div>
+
+</form>
+<br />
+<br />
+
+
+
+
+    <div class="form-group">
+        <label class="control-label" >Potrošeno: </label>
+        <label style="color: palevioletred"><h3>@Model.brojPotrosenih</h3></label>
+
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+    
+        <label class="control-label"  >Preostalo: </label>
+   
+        <label style="color:forestgreen"><h3>@Model.brojPreostalih</h3></label>
+    </div>
+
+
+
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+
+
+
+            <th>Datum</th>
+            <th>Vrijeme</th>
+
+
+
+        </tr>
+    </thead>
+    @foreach (NasSeminarski.Areas.ModulStudent.Controllers.ObrociController.IndexVM.ObrokInfo x in Model.obroci)
+    {
+        <tr>
+
+            <td>@x.Datum.ToString("dd/MM/yyy")</td>
+            <td>@x.Datum.ToString("hh:mm")</td>
+
+          
+
+
+        </tr>
+
+    }
+</table>
+<div id="div2"></div>

@@ -1,0 +1,29 @@
+﻿@{
+    // Layout = null;
+    ViewBag.Title = "Studentski hotel Studentikus";
+
+}
+
+<br />
+<br />
+<h3>EVIDENCIJA REZERVACIJA SALE</h3>
+<br />
+<br />
+
+<a href="/ModulGost/RezervacijaSale/Prikazi" class="btn btn-default btn-lg">
+    <span class=" glyphicon glyphicon-list-alt" aria-hidden="true">
+    </span>
+    Prikaži rezervacije sale
+</a>
+
+<a href="/ModulGost/RezervacijaSale/Dodaj" class="btn btn-default btn-lg">
+    <span class=" glyphicon glyphicon-plus" aria-hidden="true">
+    </span>
+    Dodaj novu rezervaciju sale
+</a>
+<br />
+<a href="/ModulGost/Gost" class="btn btn-default btn-lg">
+    <span class=" glyphicon glyphicon-home" aria-hidden="true">
+    </span>
+    Vrati se na početnu stranicu
+</a>

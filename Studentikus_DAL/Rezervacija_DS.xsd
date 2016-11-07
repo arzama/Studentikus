@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Rezervacija_DS" targetNamespace="http://tempuri.org/Rezervacija_DS.xsd" xmlns:mstns="http://tempuri.org/Rezervacija_DS.xsd" xmlns="http://tempuri.org/Rezervacija_DS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="si001_studentConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="si001_studentConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Studentikus_UI.Properties.Settings.GlobalReference.Default.si001_studentConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="si001_studentConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="si001_studentConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Studentikus_DAL.Properties.Settings.GlobalReference.Default.si001_studentConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_Rezervacije1TableAdapter" GeneratorDataComponentClassName="view_Rezervacije1TableAdapter" Name="view_Rezervacije1" UserDataComponentName="view_Rezervacije1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="si001_studentConnectionString1 (Settings)" DbObjectName="si001_student.si001_student.view_Rezervacije" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DatumPrijave, DatumOdjave, Ime, Prezime, BrojSobe FROM si001_student.view_Rezervacije</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DatumPrijave" DataSetColumn="DatumPrijave" />
+              <Mapping SourceColumn="DatumOdjave" DataSetColumn="DatumOdjave" />
+              <Mapping SourceColumn="Ime" DataSetColumn="Ime" />
+              <Mapping SourceColumn="Prezime" DataSetColumn="Prezime" />
+              <Mapping SourceColumn="BrojSobe" DataSetColumn="BrojSobe" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Rezervacija_DS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Rezervacija_DS" msprop:Generator_UserDSName="Rezervacija_DS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="view_Rezervacije1" msprop:Generator_TableClassName="view_Rezervacije1DataTable" msprop:Generator_TableVarName="tableview_Rezervacije1" msprop:Generator_TablePropName="view_Rezervacije1" msprop:Generator_RowDeletingName="view_Rezervacije1RowDeleting" msprop:Generator_RowChangingName="view_Rezervacije1RowChanging" msprop:Generator_RowEvHandlerName="view_Rezervacije1RowChangeEventHandler" msprop:Generator_RowDeletedName="view_Rezervacije1RowDeleted" msprop:Generator_UserTableName="view_Rezervacije1" msprop:Generator_RowChangedName="view_Rezervacije1RowChanged" msprop:Generator_RowEvArgName="view_Rezervacije1RowChangeEvent" msprop:Generator_RowClassName="view_Rezervacije1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DatumPrijave" msprop:Generator_ColumnVarNameInTable="columnDatumPrijave" msprop:Generator_ColumnPropNameInRow="DatumPrijave" msprop:Generator_ColumnPropNameInTable="DatumPrijaveColumn" msprop:Generator_UserColumnName="DatumPrijave" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DatumOdjave" msprop:Generator_ColumnVarNameInTable="columnDatumOdjave" msprop:Generator_ColumnPropNameInRow="DatumOdjave" msprop:Generator_ColumnPropNameInTable="DatumOdjaveColumn" msprop:Generator_UserColumnName="DatumOdjave" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Ime" msprop:Generator_ColumnVarNameInTable="columnIme" msprop:Generator_ColumnPropNameInRow="Ime" msprop:Generator_ColumnPropNameInTable="ImeColumn" msprop:Generator_UserColumnName="Ime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Prezime" msprop:Generator_ColumnVarNameInTable="columnPrezime" msprop:Generator_ColumnPropNameInRow="Prezime" msprop:Generator_ColumnPropNameInTable="PrezimeColumn" msprop:Generator_UserColumnName="Prezime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BrojSobe" msprop:Generator_ColumnVarNameInTable="columnBrojSobe" msprop:Generator_ColumnPropNameInRow="BrojSobe" msprop:Generator_ColumnPropNameInTable="BrojSobeColumn" msprop:Generator_UserColumnName="BrojSobe" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

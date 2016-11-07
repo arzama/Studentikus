@@ -1,0 +1,50 @@
+﻿@model NasSeminarski.Areas.ModulUprava.Controllers.UlogaController.UrediVM
+<h2>Upravljanje ulogama</h2>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Uloga</div>
+    <div class="panel-body">
+        @using (Html.BeginForm("Snimi", "Uloga"))
+        {
+            @Html.HiddenFor(model => model.Id)
+
+
+            <div class="form-group">
+                <label>Naziv</label>
+                @Html.TextBoxFor(model => model.Naziv, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Naziv)
+            </div>
+
+            <div class="form-group">
+                <label>Opis</label>
+                @Html.TextBoxFor(model => model.Opis, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Opis)
+            </div>
+
+
+
+            <div>
+                @Html.ValidationSummary()
+            </div>
+            <input type="submit" value="Snimi" class="btn btn-default" />
+        }
+
+    </div>
+</div>
+
+@if (Model.Id != 0)
+{
+    <div class="panel panel-primary">
+        <div class="panel-heading">Korisnici</div>
+        <div class="panel-body" id="div">
+            @* NAPOMENA: Ovo nije Html.ActionLink koji generiše <a href="Link">Opis</a>
+                već ovo je Html.Action koji poziva Akciju a njen rezultat (HTML) ugrađuje u ovaj View*@
+
+            @Html.Action("Index", "Korisnik", new { ulogaId = Model.Id })
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Prikazi")
+</div>

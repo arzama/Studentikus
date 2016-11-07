@@ -1,0 +1,14 @@
+﻿@{
+    //Layout = null;
+}
+
+<h1><b>Studentski hotel "Studentikus"</b></h1>
+<br />
+<h4><b>Registracija</b></h4>
+<br />
+<a href="/ModulGost/Registracija/Uredi">Registriraj se</a>
+
+<br />
+<br />
+<a href="/Home/Index">Vrati se na početnu stranicu</a>
+

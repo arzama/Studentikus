@@ -1,0 +1,30 @@
+﻿@{
+    //Layout = null;
+}
+
+<br />
+</br>
+<h4><b>Upravljanje zaposlenicima</b></h4>
+</br>
+<br />
+<a href="/ModulUprava/Zaposlenik/Prikazi" class="btn btn-default btn-lg">
+    <span class=" glyphicon glyphicon-list-alt" aria-hidden="true">
+    </span>
+    Prikaži zaposlenike
+</a>
+
+<a href="/ModulUprava/Zaposlenik/Dodaj" class="btn btn-default btn-lg">
+    <span class=" glyphicon glyphicon-plus" aria-hidden="true">
+    </span>
+    Dodaj novog zaposlenika
+</a>
+
+</br>
+</br>
+<a href="/ModulUprava/Meni" class="btn btn-default btn-lg">
+    <span class=" glyphicon glyphicon-home" aria-hidden="true">
+    </span>
+    Home
+</a>
+
+

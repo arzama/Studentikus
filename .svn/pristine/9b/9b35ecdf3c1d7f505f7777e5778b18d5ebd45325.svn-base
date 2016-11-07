@@ -1,0 +1,10 @@
+﻿
+<li class="caption-menu">Student</li>
+
+
+
+
+<li>
+
+    <a href="@Url.Action("Index", "Obroci", new {Area = "ModulStudent"})"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Pregled obroka</span></a>
+</li>

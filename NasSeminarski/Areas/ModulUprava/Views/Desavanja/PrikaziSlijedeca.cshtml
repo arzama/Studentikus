@@ -1,0 +1,55 @@
+﻿@using NasSeminarski.DAL
+@using NasSeminarski.Areas.ModulUprava.Models
+@model NasSeminarski.Areas.ModulUprava.Controllers.DesavanjaController.PrikaziVM
+
+
+@{Layout = null;}
+
+<br />
+<div class="form-group">
+    <label class="control-label">Broj dešavanja koji se trebaju održati: </label>
+    <label style="color: palevioletred">@Model.broj</label>
+</div>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+
+            <th>Naziv</th>
+            <th>Datum rezervacije</th>
+            <th>Opis</th>
+            <th>Rezervisano na ime</th>
+            <th>Kontakt telefon</th>
+            <th>Zaposlenik koji je procesirao</th>
+            <th>Opcije</th>
+
+
+
+        </tr>
+    </thead>
+
+    @foreach (NasSeminarski.Areas.ModulUprava.Controllers.DesavanjaController.PrikaziVM.DesavanjaInfo x in Model.desavanja)
+    {
+        <tr>
+
+            <td>@x.Nazv</td>
+            <td>@x.Datum.ToString("dd-MM-yyyy")</td>
+            <td>@x.Opis</td>
+            <td>@x.KorisnikPrezime @x.KorisnikIme </td>
+            <td>@x.Telefon</td>
+            <td>@x.ZaposlenikIme @x.ZaposlenikPrezime</td>
+            <td>
+
+                @Ajax.ActionLink("Detalji", "Detalji", new { Id = @x.Id }, new AjaxOptions { UpdateTargetId = "div2" }, new { @class = "btn btn-primary btn-sm" })
+
+
+ 
+
+            </td>
+
+        </tr>
+    }
+</table>
+<br />
+<div id="div2"></div>

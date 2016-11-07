@@ -1,0 +1,36 @@
+﻿@{
+    //Layout = null;
+}
+<br />
+<br />
+<h4><b>REZERVACIJE SOBA</b></h4>
+</br>
+<br />
+@*<a href="/ModulRecepcioner/RezervacijaSoba/PrikaziSobe" class="btn btn-default btn-lg">
+    <span class=" glyphicon glyphicon-list-alt" aria-hidden="true">
+    </span>
+
+    Prikaži sobe
+</a>*@
+
+<a href="/ModulRecepcioner/RezervacijaSoba/PrikaziRezervacije" class="btn btn-default btn-lg">
+    <span class=" glyphicon glyphicon-th" aria-hidden="true">
+    </span>
+
+    Prikaži sve rezervacije i podatke o gostima
+</a>
+
+<br />
+<br />
+
+<br />
+<br />
+
+<br />
+<br />
+<a href="/ModulRecepcioner/Meni" class="btn btn-default btn-lg">
+    <span class=" glyphicon glyphicon-home" aria-hidden="true">
+    </span>
+    Vrati se na početnu stranicu
+</a>
+

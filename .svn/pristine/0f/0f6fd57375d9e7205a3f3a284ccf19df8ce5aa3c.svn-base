@@ -1,0 +1,55 @@
+﻿@using NasSeminarski.Models
+
+@model NasSeminarski.Areas.ModulRecepcioner.Controllers.RezervacijeController.IndexVM
+
+
+<h2 style="color:darksalmon"><b>PRETRAGA REZERVACIJA</b></h2>
+<form>
+    <div>
+        <label>Sobe</label>
+        @Html.DropDownListFor(model => model.sobaId, Model.Sobestavke, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <label>Korisnik</label>
+        @Html.DropDownListFor(model => model.KorisnikId, Model.KorisnikStavka, new { @class = "form-control" })
+    </div>
+<br />
+    <input type="submit" value="Prikaži" class="btn btn-danger" />
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Datum prijave</th>
+            <th>Datum odjave</th>
+            <th>Realizovana</th>
+
+            <th>Broj sobe</th>
+            <th>Ime korisnika</th>
+
+
+        </tr>
+    </thead>
+
+    @foreach (NasSeminarski.Areas.ModulRecepcioner.Controllers.RezervacijeController.IndexVM.rezervacijeInfo x in Model.rezervacije)
+    {
+
+        <tr>
+
+            <th>@x.DatumPrijave</th>
+            <th>@x.DatumOdjave</th>
+            <th>@x.Realizovana</th>
+            <th>@x.Soba</th>
+            <th>@x.Korisnik</th>
+
+            <td>
+
+                @Html.ActionLink("OBRISI REZERVACIJU", "Ponisti", new { raId = @x.Id }, new { @class = "btn btn-danger" })
+
+
+            </td>
+
+        </tr>
+    }
+</table>

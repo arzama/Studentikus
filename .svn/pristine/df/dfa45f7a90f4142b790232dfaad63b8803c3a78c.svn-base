@@ -1,0 +1,34 @@
+﻿
+<li class="caption-menu">Upravnik</li>
+
+
+
+
+<li>
+
+    <a href="@Url.Action("Index", "Ugovor", new {Area = "ModulUprava"})"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Ugovori o stanovanju</span></a>
+</li>
+
+<li>
+
+    <a href="@Url.Action("Index", "Desavanja", new {Area = "ModulUprava"})"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Dešavanja</span></a>
+</li>
+
+<li>
+
+    <a href="@Url.Action("Prikazi", "Uloga", new {Area = "ModulUprava"})"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Uloge</span></a>
+</li>
+
+<li>
+
+    <a href="@Url.Action("Prikazi", "Zaposlenik", new {Area = "ModulUprava"})"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Zaposlenici</span></a>
+</li>
+
+<li>
+
+    <a href="@Url.Action("Index", "Izvjestaj", new {Area = "ModulUprava"})"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Refundisanje troškova</span></a>
+</li>
+<li>
+
+    <a href="@Url.Action("Index", "Student", new {Area = "ModulUprava"})"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Studenti</span></a>
+</li>

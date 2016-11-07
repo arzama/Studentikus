@@ -1,0 +1,1054 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{815145C7-C224-4CA6-B511-D59C01F0D9CC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NasSeminarski</RootNamespace>
+    <AssemblyName>NasSeminarski</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>12.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MVC Foolproof Validation">
+      <HintPath>..\packages\foolproof.0.9.4517\lib\MVC Foolproof Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\ModulDomar\Controllers\DomarController.cs" />
+    <Compile Include="Areas\ModulDomar\Models\DomarPrikaziViewModel.cs" />
+    <Compile Include="Areas\ModulDomar\Models\DomarUrediViewModel.cs" />
+    <Compile Include="Areas\ModulDomar\ModulDomarAreaRegistration.cs" />
+    <Compile Include="Areas\ModulGost\Controllers\GostController.cs" />
+    <Compile Include="Areas\ModulGost\Controllers\RecenzijeController.cs" />
+    <Compile Include="Areas\ModulGost\Controllers\RegistracijaController.cs" />
+    <Compile Include="Areas\ModulGost\Controllers\RezervacijaController.cs" />
+    <Compile Include="Areas\ModulGost\Controllers\RezervacijaRestoranaController.cs" />
+    <Compile Include="Areas\ModulGost\Controllers\RezervacijaSaleController.cs" />
+    <Compile Include="Areas\ModulGost\Models\GostPrikaziViewModel.cs" />
+    <Compile Include="Areas\ModulGost\Models\RecenzijePrikaziVM.cs" />
+    <Compile Include="Areas\ModulGost\Models\RecenzijeUrediVM.cs" />
+    <Compile Include="Areas\ModulGost\Models\RegistracijaDodajViewModel.cs" />
+    <Compile Include="Areas\ModulGost\Models\RestoranPrikaziVM.cs" />
+    <Compile Include="Areas\ModulGost\Models\RestoranUrediVM.cs" />
+    <Compile Include="Areas\ModulGost\Models\RezervacijaPrikaziViewModel.cs" />
+    <Compile Include="Areas\ModulGost\Models\RezervacijaUrediViewModel.cs" />
+    <Compile Include="Areas\ModulGost\Models\RezervacijePrikaziVM.cs" />
+    <Compile Include="Areas\ModulGost\Models\RezervacijeUrediVM.cs" />
+    <Compile Include="Areas\ModulGost\Models\SalaPrikaziVM.cs" />
+    <Compile Include="Areas\ModulGost\Models\SalaUrediVM.cs" />
+    <Compile Include="Areas\ModulGost\Models\SobaPrikaziViewModel.cs" />
+    <Compile Include="Areas\ModulGost\Models\SobaUrediViewModel.cs" />
+    <Compile Include="Areas\ModulGost\ModulGostAreaRegistration.cs" />
+    <Compile Include="Areas\ModulRacunovodja\Controllers\PlataController.cs" />
+    <Compile Include="Areas\ModulRacunovodja\Controllers\RacunovodjaController.cs" />
+    <Compile Include="Areas\ModulRacunovodja\Controllers\TroskoviController.cs" />
+    <Compile Include="Areas\ModulRacunovodja\Controllers\UplateController.cs" />
+    <Compile Include="Areas\ModulRacunovodja\ModulRacunovodjaAreaRegistration.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Controllers\DesavanjaController.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Controllers\KljucController.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Controllers\KorisnikController.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Controllers\ObrokController.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Controllers\RezervacijeController.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Controllers\MeniController.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Controllers\SobeController.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Controllers\ZaduzenjaKljucaController.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Models\RezervacijaSaleUrediVM.cs" />
+    <Compile Include="Areas\ModulSobarica2\Controllers\Sobarica2Controller.cs" />
+    <Compile Include="Areas\ModulSobarica2\Helper\ProvjeraRezervacije.cs" />
+    <Compile Include="Areas\ModulSobarica2\Models\SobaricaPrikazi2ViewModel.cs" />
+    <Compile Include="Areas\ModulSobarica2\Models\SobaricaUrediViewModel.cs" />
+    <Compile Include="Areas\ModulSobarica2\ModulSobarica2AreaRegistration.cs" />
+    <Compile Include="Areas\ModulStudent\Controllers\ObrociController.cs" />
+    <Compile Include="Areas\ModulStudent\ModulStudentAreaRegistration.cs" />
+    <Compile Include="Areas\ModulUprava\Controllers\DesavanjaController.cs" />
+    <Compile Include="Areas\ModulUprava\Controllers\IzvjestajController.cs" />
+    <Compile Include="Areas\ModulUprava\Controllers\KorisnikController.cs" />
+    <Compile Include="Areas\ModulUprava\Controllers\MeniController.cs" />
+    <Compile Include="Areas\ModulUprava\Controllers\StudentController.cs" />
+    <Compile Include="Areas\ModulUprava\Controllers\UgovorController.cs" />
+    <Compile Include="Areas\ModulUprava\Controllers\UlogaController.cs" />
+    <Compile Include="Areas\ModulUprava\Controllers\ZaposlenikController.cs" />
+    <Compile Include="Areas\ModulUprava\Models\ZaposlenikPrikaziViewModel.cs" />
+    <Compile Include="Areas\ModulUprava\Models\ZaposlenikUrediViewModel.cs" />
+    <Compile Include="Areas\ModulUprava\ModulUpravaAreaRegistration.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Controllers\RestoraniController.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Controllers\SalaController.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Controllers\StudentController.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Models\RezervacijaSobaPrikaziViewModel.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Models\RezervacijaSobaUrediViewModel.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Models\RezervacijaRestoranaPrikaziViewModel.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Models\RezervacijaRestoranaUrediViewModel.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Models\RezervacijaSalePrikaziViewModel.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Models\SobaPrikaziVM.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Models\StudentPrikaziViewModel.cs" />
+    <Compile Include="Areas\ModulRecepcioner\Models\StudentUrediViewModel.cs" />
+    <Compile Include="Areas\ModulRecepcioner\ModulRecepcionerAreaRegistration.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MeniController.cs" />
+    <Compile Include="Controllers\RecepcionerController.cs" />
+    <Compile Include="DAL\MojContext.cs" />
+    <Compile Include="EkstendedFunkcije.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Autentifikacija.cs" />
+    <Compile Include="Helper\Autorizacija.cs" />
+    <Compile Include="Helper\IEntity.cs" />
+    <Compile Include="Migrations\201510251529532_Nesto.cs" />
+    <Compile Include="Migrations\201510251529532_Nesto.Designer.cs">
+      <DependentUpon>201510251529532_Nesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Desavanja.cs" />
+    <Compile Include="Models\Faktura.cs" />
+    <Compile Include="Models\Kanton.cs" />
+    <Compile Include="Models\OdrzavanjeSobe.cs" />
+    <Compile Include="Models\EvidencijaObroka.cs" />
+    <Compile Include="Models\Inventar.cs" />
+    <Compile Include="Models\Kljuc.cs" />
+    <Compile Include="Models\Korisnik.cs" />
+    <Compile Include="Models\MjesecObracun.cs" />
+    <Compile Include="Models\Plata.cs" />
+    <Compile Include="Models\Racun.cs" />
+    <Compile Include="Models\Recenzije.cs" />
+    <Compile Include="Models\RezervacijaRestorana.cs" />
+    <Compile Include="Models\RezervacijaSale.cs" />
+    <Compile Include="Models\RezervacijaSobe.cs" />
+    <Compile Include="Models\SkolskaGodina.cs" />
+    <Compile Include="Models\Soba.cs" />
+    <Compile Include="Models\StatusSobe.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Troskovi.cs" />
+    <Compile Include="Models\UgovorOStanovanju.cs" />
+    <Compile Include="Models\Uloge.cs" />
+    <Compile Include="Models\Uplata.cs" />
+    <Compile Include="Models\Zaduzenja.cs" />
+    <Compile Include="Models\ZaduzenjeKljuca.cs" />
+    <Compile Include="Models\Zaposlenik.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="AdminTemplate\fonts\font-awesome\fontawesome-webfont.svg" />
+    <Content Include="AdminTemplate\images\pixel-admin\avatar.png" />
+    <Content Include="AdminTemplate\images\pixel-admin\blank.png" />
+    <Content Include="AdminTemplate\images\pixel-admin\blur.svg" />
+    <Content Include="AdminTemplate\images\pixel-admin\main-menu-bg.png" />
+    <Content Include="AdminTemplate\images\pixel-admin\main-navbar-bg.png" />
+    <Content Include="AdminTemplate\images\pixel-admin\main-navbar-logo.png" />
+    <Content Include="AdminTemplate\images\plugins\bootstrap-editable\loading.gif" />
+    <Content Include="AdminTemplate\images\plugins\jquery.minicolors.png" />
+    <Content Include="AdminTemplate\images\themes\adminflare\body-bg.png" />
+    <Content Include="AdminTemplate\images\themes\adminflare\ie-navbar-bg.png" />
+    <Content Include="AdminTemplate\images\themes\adminflare\menu-bg.png" />
+    <Content Include="AdminTemplate\images\themes\clean\body-bg.gif" />
+    <Content Include="AdminTemplate\javascripts\bootstrap-editable-demo.js" />
+    <Content Include="AdminTemplate\javascripts\bootstrap-editable-demo.min.js" />
+    <Content Include="AdminTemplate\javascripts\bootstrap.js" />
+    <Content Include="AdminTemplate\javascripts\bootstrap.min.js" />
+    <Content Include="AdminTemplate\javascripts\demo-mock.js" />
+    <Content Include="AdminTemplate\javascripts\demo-mock.min.js" />
+    <Content Include="AdminTemplate\javascripts\ie.js" />
+    <Content Include="AdminTemplate\javascripts\ie.min.js" />
+    <Content Include="AdminTemplate\javascripts\jquery-ui-extras.js" />
+    <Content Include="AdminTemplate\javascripts\jquery-ui-extras.min.js" />
+    <Content Include="AdminTemplate\javascripts\jquery.mockjax.js" />
+    <Content Include="AdminTemplate\javascripts\jquery.mockjax.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\aight-1.2.1.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootbox.min-4.2.0.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-3.1.1\affix.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-3.1.1\alert.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-3.1.1\button.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-3.1.1\carousel.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-3.1.1\collapse.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-3.1.1\dropdown.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-3.1.1\modal.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-3.1.1\popover.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-3.1.1\scrollspy.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-3.1.1\tab.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-3.1.1\tooltip.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-3.1.1\transition.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepaginator-1.1.0.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\bootstrap-datepicker.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.ar.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.az.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.cy.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.da.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.de.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.el.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.es.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.et.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.fa.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.gl.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.he.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.id.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.is.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.it.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.ka.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.kk.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.nl-BE.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.no.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.th.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.ua.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.vi.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-datepicker-1.3.0\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-editable-1.5.1\bootstrap-editable.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-editable-1.5.1\inputs-ext\address\address.css" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-editable-1.5.1\inputs-ext\address\address.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-editable-1.5.1\inputs-ext\typeaheadjs\lib\typeahead.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-editable-1.5.1\inputs-ext\typeaheadjs\lib\typeahead.js-bootstrap.css" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-editable-1.5.1\inputs-ext\typeaheadjs\typeaheadjs.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-editable-1.5.1\inputs-ext\wysihtml5\bootstrap-wysihtml5-0.0.2\bootstrap-wysihtml5-0.0.2.css" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-editable-1.5.1\inputs-ext\wysihtml5\bootstrap-wysihtml5-0.0.2\bootstrap-wysihtml5-0.0.2.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-editable-1.5.1\inputs-ext\wysihtml5\bootstrap-wysihtml5-0.0.2\bootstrap-wysihtml5-0.0.2.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-editable-1.5.1\inputs-ext\wysihtml5\bootstrap-wysihtml5-0.0.2\wysihtml5-0.3.0.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-editable-1.5.1\inputs-ext\wysihtml5\bootstrap-wysihtml5-0.0.2\wysihtml5-0.3.0.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-editable-1.5.1\inputs-ext\wysihtml5\bootstrap-wysihtml5-0.0.2\wysiwyg-color.css" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-editable-1.5.1\inputs-ext\wysihtml5\wysihtml5.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-markdown-2.2.1\bootstrap-markdown.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-markdown-2.2.1\markdown.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-markdown-2.2.1\to-markdown.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-tabdrop.js" />
+    <Content Include="AdminTemplate\javascripts\libs\bootstrap-timepicker-0.2.5.js" />
+    <Content Include="AdminTemplate\javascripts\libs\dropzone-3.8.4.js" />
+    <Content Include="AdminTemplate\javascripts\libs\dropzone-amd-module-3.8.4.js" />
+    <Content Include="AdminTemplate\javascripts\libs\excanvas.js" />
+    <Content Include="AdminTemplate\javascripts\libs\fastclick-0.6.11.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-datatables-1.10.0\datatables.bootstrap3.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-datatables-1.10.0\jquery.datatables.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery-ui-i18n.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-af.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-ar-DZ.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-ar.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-az.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-be.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-bg.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-bs.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-ca.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-cs.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-cy-GB.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-da.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-el.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-en-AU.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-en-NZ.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-eo.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-et.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-eu.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-fa.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-fi.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-fo.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-fr-CA.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-fr-CH.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-gl.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-he.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-hi.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-hr.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-hu.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-hy.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-id.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-is.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-ka.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-kk.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-km.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-ko.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-ky.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-lb.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-lt.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-lv.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-mk.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-ml.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-ms.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-nb.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-nl-BE.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-nl.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-nn.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-no.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-pl.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-pt.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-rm.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-ro.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-sk.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-sl.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-sq.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-sr-SR.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-sr.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-sv.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-ta.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-th.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-tj.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-tr.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-uk.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-vi.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-zh-HK.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\i18n\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery-ui.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.accordion.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.autocomplete.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.button.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.core.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.datepicker.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.dialog.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.draggable.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.droppable.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.effect-blind.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.effect-bounce.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.effect-clip.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.effect-drop.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.effect-explode.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.effect-fade.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.effect-fold.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.effect-highlight.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.effect-pulsate.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.effect-scale.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.effect-shake.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.effect-slide.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.effect-transfer.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.effect.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.menu.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.mouse.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.position.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.progressbar.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.resizable.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.selectable.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.slider.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.sortable.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.spinner.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.tabs.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.tooltip.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\jquery.ui.widget.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery-ui-i18n.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-af.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-ar-DZ.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-ar.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-az.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-be.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-bg.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-bs.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-ca.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-cs.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-cy-GB.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-da.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-de.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-el.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-en-AU.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-en-GB.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-en-NZ.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-eo.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-es.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-et.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-eu.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-fa.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-fi.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-fo.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-fr-CA.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-fr-CH.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-fr.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-gl.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-he.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-hi.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-hr.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-hu.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-hy.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-id.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-is.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-it.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-ja.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-ka.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-kk.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-km.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-ko.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-ky.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-lb.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-lt.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-lv.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-mk.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-ml.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-ms.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-nb.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-nl-BE.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-nl.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-nn.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-no.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-pl.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-pt-BR.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-pt.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-rm.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-ro.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-ru.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-sk.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-sl.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-sq.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-sr-SR.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-sr.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-sv.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-ta.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-th.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-tj.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-tr.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-uk.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-vi.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-zh-CN.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-zh-HK.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\i18n\jquery.ui.datepicker-zh-TW.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery-ui.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.accordion.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.autocomplete.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.button.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.core.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.datepicker.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.dialog.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.draggable.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.droppable.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.effect-blind.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.effect-bounce.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.effect-clip.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.effect-drop.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.effect-explode.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.effect-fade.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.effect-fold.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.effect-highlight.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.effect-pulsate.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.effect-scale.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.effect-shake.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.effect-slide.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.effect-transfer.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.effect.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.menu.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.mouse.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.position.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.progressbar.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.resizable.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.selectable.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.slider.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.sortable.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.spinner.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.tabs.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.tooltip.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery-ui-1.10.4\minified\jquery.ui.widget.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.autosize-1.18.4.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.easypiechart-2.1.5.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\excanvas.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\excanvas.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.colorhelpers.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.colorhelpers.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.canvas.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.canvas.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.categories.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.categories.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.crosshair.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.crosshair.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.errorbars.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.errorbars.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.fillbetween.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.fillbetween.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.image.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.image.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.navigate.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.navigate.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.pie.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.pie.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.resize.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.resize.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.selection.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.selection.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.stack.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.stack.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.symbol.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.symbol.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.threshold.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.threshold.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.time.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.flot.time.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.flot-0.8.2\jquery.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.growl-1.1.5.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.knob-1.2.7.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.maskedinput-1.3.1.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.minicolors-2.1.1.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.slimscroll-1.3.2.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.sparkline-2.1.2.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.vague-0.0.4.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.validate-1.11.1\additional-methods.js" />
+    <Content Include="AdminTemplate\javascripts\libs\jquery.validate-1.11.1\jquery.validate.js" />
+    <Content Include="AdminTemplate\javascripts\libs\moment-2.5.1.js" />
+    <Content Include="AdminTemplate\javascripts\libs\morris-0.5.0.js" />
+    <Content Include="AdminTemplate\javascripts\libs\pixel-slimscroll.js" />
+    <Content Include="AdminTemplate\javascripts\libs\raphael-2.1.2.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\respond.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2.min.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_ar.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_bg.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_ca.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_cs.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_da.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_de.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_el.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_es.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_et.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_eu.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_fa.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_fi.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_fr.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_gl.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_he.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_hr.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_hu.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_id.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_is.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_it.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_ja.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_ko.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_lt.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_lv.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_mk.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_ms.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_nl.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_no.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_pl.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_pt-BR.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_pt-PT.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_ro.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_ru.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_sk.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_sv.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_th.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_tr.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_ua.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_vi.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_zh-CN.js" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_zh-TW.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-ca-ES.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-cs-CZ.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-de-DE.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-es-ES.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-fr-FR.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-id-ID.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-it-IT.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-ja-JP.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-ko-KR.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-nb-NO.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-nl-NL.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-pt-BR.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-ro-RO.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-ru-RU.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-tr-TR.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-uk-UA.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-zh-CN.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\lang\summernote-zh-TW.js" />
+    <Content Include="AdminTemplate\javascripts\libs\summernote-0.5.1\summernote.js" />
+    <Content Include="AdminTemplate\javascripts\pixel-admin.js" />
+    <Content Include="AdminTemplate\javascripts\pixel-admin.min.js" />
+    <Content Include="AdminTemplate\stylesheets\bootstrap.css" />
+    <Content Include="AdminTemplate\stylesheets\bootstrap.min.css" />
+    <Content Include="AdminTemplate\stylesheets\pages.css" />
+    <Content Include="AdminTemplate\stylesheets\pages.min.css" />
+    <Content Include="AdminTemplate\stylesheets\pixel-admin.css" />
+    <Content Include="AdminTemplate\stylesheets\pixel-admin.min.css" />
+    <Content Include="AdminTemplate\stylesheets\rtl.css" />
+    <Content Include="AdminTemplate\stylesheets\rtl.min.css" />
+    <Content Include="AdminTemplate\stylesheets\themes.css" />
+    <Content Include="AdminTemplate\stylesheets\themes.min.css" />
+    <Content Include="AdminTemplate\stylesheets\widgets.css" />
+    <Content Include="AdminTemplate\stylesheets\widgets.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\maxresdefault.jpg" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\ModulRecepcioner\Views\Student\Prikazi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Student\Index.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Student\Uredi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Restorani\Index.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Restorani\Dodaj.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Restorani\Prikazi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Restorani\Uredi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Restorani\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\web.config" />
+    <Content Include="Areas\ModulUprava\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulSobarica2\Views\web.config" />
+    <Content Include="Areas\ModulSobarica2\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\ModulSobarica2\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulSobarica2\Views\Sobarica2\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulSobarica2\Views\Sobarica2\Prikazi.cshtml" />
+    <Content Include="Areas\ModulSobarica2\Views\Sobarica2\Index.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Sala\Index.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Sala\Prikazi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Sala\Uredi.cshtml" />
+    <Content Include="Areas\ModulDomar\Views\web.config" />
+    <Content Include="Areas\ModulDomar\Views\Domar\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulDomar\Views\Domar\Dodaj.cshtml" />
+    <Content Include="Areas\ModulDomar\Views\Domar\Index.cshtml" />
+    <Content Include="Areas\ModulDomar\Views\Domar\Prikazi.cshtml" />
+    <Content Include="Areas\ModulDomar\Views\Domar\Uredi.cshtml" />
+    <Content Include="Areas\ModulDomar\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\ModulDomar\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulGost\Views\web.config" />
+    <Content Include="Areas\ModulGost\Views\Gost\Prikazi.cshtml" />
+    <Content Include="Areas\ModulGost\Views\Gost\Dodaj.cshtml" />
+    <Content Include="Areas\ModulGost\Views\Gost\PrikaziRezervaciju.cshtml" />
+    <Content Include="Areas\ModulGost\Views\Gost\Uredi.cshtml" />
+    <Content Include="Areas\ModulGost\Views\Gost\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulGost\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\ModulGost\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulGost\Views\Gost\Index.cshtml" />
+    <Content Include="Areas\ModulSobarica2\Views\Sobarica2\Uredi.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Uloga\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Uloga\Index.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Uloga\Uredi.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Uloga\Prikazi.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Zaposlenik\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Zaposlenik\Index.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Zaposlenik\Uredi.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Zaposlenik\Prikazi.cshtml" />
+    <Content Include="Areas\ModulGost\Views\Registracija\Uredi.cshtml" />
+    <Content Include="Areas\ModulGost\Views\Registracija\Index.cshtml" />
+    <Content Include="Areas\ModulGost\Views\Registracija\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\RezervacijaSoba\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\RezervacijaSoba\Index.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\RezervacijaSoba\PrikaziRezervacije.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\RezervacijaSoba\PrikaziSobe.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\RezervacijaSoba\Uredi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Sala\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Meni\Index.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Meni\Index.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Korisnik\Index.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Korisnik\Uredi.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Desavanja\Index.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Desavanja\Prikazi.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Zaposlenik\Obrisi.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Desavanja\Detalji.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Desavanja\PrikaziSlijedeca.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Ugovor\Index.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Ugovor\Uredi.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Izvjestaj\Index.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Student\Uredi.cshtml" />
+    <Content Include="Areas\ModulUprava\Views\Student\Index.cshtml" />
+    <Content Include="AdminTemplate\fonts\font-awesome\fontawesome-webfont.eot" />
+    <Content Include="AdminTemplate\fonts\font-awesome\fontawesome-webfont.ttf" />
+    <Content Include="AdminTemplate\fonts\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="AdminTemplate\fonts\font-awesome\FontAwesome.otf" />
+    <Content Include="AdminTemplate\javascripts\libs\select2-3.4.5\select2_locale_en.js.template" />
+    <Content Include="Areas\ModulStudent\Views\web.config" />
+    <Content Include="Areas\ModulStudent\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulStudent\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\ModulStudent\Views\Obroci\Index.cshtml" />
+    <Content Include="Areas\ModulStudent\Views\Obroci\Uredi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Rezervacije\Prikazi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Rezervacije\Uredi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Rezervacije\Index.cshtml" />
+    <Content Include="Areas\ModulRacunovodja\Views\web.config" />
+    <Content Include="Areas\ModulRacunovodja\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulRacunovodja\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Kljuc\Uredi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Kljuc\Prikazi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Kljuc\Index.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Obrok\Prikazi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Obrok\Uredi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Obrok\Index.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\ZaduzenjaKljuca\Prikazi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\ZaduzenjaKljuca\Uredi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\ZaduzenjaKljuca\Index.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Korisnik\Prikazi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Korisnik\Uredi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Korisnik\Index.cshtml" />
+    <Content Include="Areas\ModulRacunovodja\Views\Plata\Prikazi.cshtml" />
+    <Content Include="Areas\ModulRacunovodja\Views\Plata\Uredi.cshtml" />
+    <Content Include="Areas\ModulRacunovodja\Views\Plata\Index.cshtml" />
+    <Content Include="Areas\ModulGost\Views\RezervacijaSale\Uredi.cshtml" />
+    <Content Include="Areas\ModulGost\Views\RezervacijaSale\Prikazi.cshtml" />
+    <Content Include="Areas\ModulGost\Views\RezervacijaSale\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulGost\Views\RezervacijaSale\Index.cshtml" />
+    <Content Include="Areas\ModulGost\Views\RezervacijaRestorana\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulGost\Views\RezervacijaRestorana\Index.cshtml" />
+    <Content Include="Areas\ModulGost\Views\RezervacijaRestorana\Prikazi.cshtml" />
+    <Content Include="Areas\ModulGost\Views\RezervacijaRestorana\Uredi.cshtml" />
+    <Content Include="Areas\ModulGost\Views\Recenzije\_ViewStart.cshtml" />
+    <Content Include="Areas\ModulGost\Views\Recenzije\Index.cshtml" />
+    <Content Include="Areas\ModulGost\Views\Recenzije\Prikazi.cshtml" />
+    <Content Include="Areas\ModulGost\Views\Recenzije\Uredi.cshtml" />
+    <Content Include="Areas\ModulRacunovodja\Views\Racunovodja\Prikazi.cshtml" />
+    <Content Include="Areas\ModulRacunovodja\Views\Racunovodja\Uredi.cshtml" />
+    <Content Include="Areas\ModulRacunovodja\Views\Racunovodja\Index.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Desavanja\Prikazi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Desavanja\Uredi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Desavanja\Index.cshtml" />
+    <Content Include="Areas\ModulRacunovodja\Views\Uplate\Prikazi.cshtml" />
+    <Content Include="Areas\ModulRacunovodja\Views\Uplate\Uredi.cshtml" />
+    <Content Include="Areas\ModulRacunovodja\Views\Uplate\Index.cshtml" />
+    <Content Include="Areas\ModulRacunovodja\Views\Troskovi\Index.cshtml" />
+    <Content Include="Areas\ModulRacunovodja\Views\Troskovi\Prikazi.cshtml" />
+    <Content Include="Areas\ModulRacunovodja\Views\Troskovi\Uredi.cshtml" />
+    <Content Include="Areas\ModulGost\Views\Rezervacija\Prikazi.cshtml" />
+    <Content Include="Areas\ModulGost\Views\Rezervacija\PrikaziSlobodneSobe.cshtml" />
+    <Content Include="Areas\ModulGost\Views\Rezervacija\Uredi.cshtml" />
+    <Content Include="Areas\ModulRecepcioner\Views\Rezervacije\View.cshtml" />
+    <None Include="Properties\PublishProfiles\si001.app.fit.ba - Web Deploy %2810%29.pubxml" />
+    <None Include="Properties\PublishProfiles\si001.app.fit.ba - Web Deploy %2811%29.pubxml" />
+    <None Include="Properties\PublishProfiles\si001.app.fit.ba - Web Deploy %2812%29.pubxml" />
+    <None Include="Properties\PublishProfiles\si001.app.fit.ba - Web Deploy %2813%29.pubxml" />
+    <None Include="Properties\PublishProfiles\si001.app.fit.ba - Web Deploy %2814%29.pubxml" />
+    <None Include="Properties\PublishProfiles\si001.app.fit.ba - Web Deploy %2815%29.pubxml" />
+    <None Include="Properties\PublishProfiles\si001.app.fit.ba - Web Deploy %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\si001.app.fit.ba - Web Deploy %283%29.pubxml" />
+    <None Include="Properties\PublishProfiles\si001.app.fit.ba - Web Deploy %284%29.pubxml" />
+    <None Include="Properties\PublishProfiles\si001.app.fit.ba - Web Deploy %285%29.pubxml" />
+    <None Include="Properties\PublishProfiles\si001.app.fit.ba - Web Deploy %286%29.pubxml" />
+    <None Include="Properties\PublishProfiles\si001.app.fit.ba - Web Deploy %287%29.pubxml" />
+    <None Include="Properties\PublishProfiles\si001.app.fit.ba - Web Deploy %288%29.pubxml" />
+    <None Include="Properties\PublishProfiles\si001.app.fit.ba - Web Deploy %289%29.pubxml" />
+    <None Include="Properties\PublishProfiles\si001.app.fit.ba - Web Deploy.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\mvcfoolproof.unobtrusive.min.js" />
+    <Content Include="Scripts\MvcFoolproofJQueryValidation.min.js" />
+    <Content Include="Scripts\MvcFoolproofValidation.min.js" />
+    <Content Include="Template\css\agency.css" />
+    <Content Include="Template\css\bootstrap.css" />
+    <Content Include="Template\css\bootstrap.min.css" />
+    <Content Include="Template\font-awesome\css\font-awesome.css" />
+    <Content Include="Template\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Template\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Template\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Template\img\about\1.jpg" />
+    <Content Include="Template\img\about\2.jpg" />
+    <Content Include="Template\img\about\3.jpg" />
+    <Content Include="Template\img\about\4.jpg" />
+    <Content Include="Template\img\header-bg.jpg" />
+    <Content Include="Template\img\logos\aetuts.jpg" />
+    <Content Include="Template\img\logos\creative-market.jpg" />
+    <Content Include="Template\img\logos\designmodo.jpg" />
+    <Content Include="Template\img\logos\envato.jpg" />
+    <Content Include="Template\img\logos\microlancer.jpg" />
+    <Content Include="Template\img\logos\themeforest.jpg" />
+    <Content Include="Template\img\logos\wordpress.jpg" />
+    <Content Include="Template\img\map-image.png" />
+    <Content Include="Template\img\portfolio\dreams-preview.png" />
+    <Content Include="Template\img\portfolio\dreams.png" />
+    <Content Include="Template\img\portfolio\escape-preview.png" />
+    <Content Include="Template\img\portfolio\escape.png" />
+    <Content Include="Template\img\portfolio\golden-preview.png" />
+    <Content Include="Template\img\portfolio\golden.png" />
+    <Content Include="Template\img\portfolio\phoca_thumb_l_109.JPG" />
+    <Content Include="Template\img\portfolio\phoca_thumb_l_112.JPG" />
+    <Content Include="Template\img\portfolio\phoca_thumb_l_13.JPG" />
+    <Content Include="Template\img\portfolio\phoca_thumb_l_139.JPG" />
+    <Content Include="Template\img\portfolio\phoca_thumb_l_15.JPG" />
+    <Content Include="Template\img\portfolio\phoca_thumb_l_2.JPG" />
+    <Content Include="Template\img\portfolio\phoca_thumb_l_7.JPG" />
+    <Content Include="Template\img\portfolio\phoca_thumb_l_87.JPG" />
+    <Content Include="Template\img\portfolio\phoca_thumb_l_96.JPG" />
+    <Content Include="Template\img\portfolio\roundicons-free.png" />
+    <Content Include="Template\img\portfolio\roundicons.png" />
+    <Content Include="Template\img\portfolio\startup-framework-preview.png" />
+    <Content Include="Template\img\portfolio\startup-framework.png" />
+    <Content Include="Template\img\portfolio\treehouse-preview.png" />
+    <Content Include="Template\img\portfolio\treehouse.png" />
+    <Content Include="Template\img\team\1.jpg" />
+    <Content Include="Template\img\team\2.jpg" />
+    <Content Include="Template\img\team\3.jpg" />
+    <Content Include="Template\img\team\picture.jpg" />
+    <Content Include="Template\js\agency.js" />
+    <Content Include="Template\js\bootstrap.js" />
+    <Content Include="Template\js\bootstrap.min.js" />
+    <Content Include="Template\js\cbpAnimatedHeader.js" />
+    <Content Include="Template\js\cbpAnimatedHeader.min.js" />
+    <Content Include="Template\js\classie.js" />
+    <Content Include="Template\js\contact_me.js" />
+    <Content Include="Template\js\jqBootstrapValidation.js" />
+    <Content Include="Template\js\jquery.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Shared\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_ViewStartHtml.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\_Layout.cshtml" />
+    <Content Include="Views\Home\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Meni\Index.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Meni\_Layout.cshtml" />
+    <Content Include="Template\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Template\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Template\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Template\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Template\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Template\font-awesome\less\core.less" />
+    <Content Include="Template\font-awesome\less\fixed-width.less" />
+    <Content Include="Template\font-awesome\less\font-awesome.less" />
+    <Content Include="Template\font-awesome\less\icons.less" />
+    <Content Include="Template\font-awesome\less\larger.less" />
+    <Content Include="Template\font-awesome\less\list.less" />
+    <Content Include="Template\font-awesome\less\mixins.less" />
+    <Content Include="Template\font-awesome\less\path.less" />
+    <Content Include="Template\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Template\font-awesome\less\spinning.less" />
+    <Content Include="Template\font-awesome\less\stacked.less" />
+    <Content Include="Template\font-awesome\less\variables.less" />
+    <Content Include="Template\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Template\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Template\font-awesome\scss\_core.scss" />
+    <Content Include="Template\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Template\font-awesome\scss\_icons.scss" />
+    <Content Include="Template\font-awesome\scss\_larger.scss" />
+    <Content Include="Template\font-awesome\scss\_list.scss" />
+    <Content Include="Template\font-awesome\scss\_mixins.scss" />
+    <Content Include="Template\font-awesome\scss\_path.scss" />
+    <Content Include="Template\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Template\font-awesome\scss\_spinning.scss" />
+    <Content Include="Template\font-awesome\scss\_stacked.scss" />
+    <Content Include="Template\font-awesome\scss\_variables.scss" />
+    <Content Include="Template\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Template\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Template\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Template\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Template\less\agency.less" />
+    <Content Include="Template\less\mixins.less" />
+    <Content Include="Template\less\variables.less" />
+    <Content Include="Template\mail\contact_me.php" />
+    <Content Include="Views\Shared\_UlogaUpravnik.cshtml" />
+    <Content Include="Views\Shared\_TopBar.cshtml" />
+    <Content Include="Views\Login\LoginKorisnika.cshtml" />
+    <Content Include="Views\Shared\_Sobarica.cshtml" />
+    <Content Include="Views\Shared\UlogaStudent.cshtml" />
+    <Content Include="Views\Shared\_Gost.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\ModulRacunovodja\Models\" />
+    <Folder Include="Areas\ModulStudent\Models\" />
+    <Folder Include="Views\Zaduzenja\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\ModulRecepcioner\Views\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\ModulRecepcioner\Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\ModulRecepcioner\Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201510251529532_Nesto.resx">
+      <DependentUpon>201510251529532_Nesto.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52747</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:42747/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

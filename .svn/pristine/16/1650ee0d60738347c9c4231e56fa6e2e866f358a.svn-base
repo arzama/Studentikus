@@ -1,0 +1,48 @@
+﻿@{
+    //Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<h1><b>Studentski hotel "Studentikus"</b></h1>
+<a href="/Login">Login</a>
+</br>
+<a href="/ModulGost/Registracija">Registracija gostiju</a>
+</br>
+@*</br>
+</br>
+<h2>Modul za recepcionera </h2>
+</br>
+<a href="/Recepcioneri/Student/">Upravljanje studentima</a>
+</br>
+<a href="/Recepcioneri/Gost">Upravljanje gostima</a>
+</br>
+<a href="/ModulGost/Gost">Prikaz soba</a>
+</br>
+<a href="/Recepcioneri/Restorani">Rezervacija restorana</a>
+</br>
+<a href="/Recepcioneri/Sala">Rezervacija sale</a>
+</br>
+</br>
+<h2> Modul za upravu </h2>
+
+<br />
+<a href="/ModulUprava/Ugovor1/">Ugovori o stanovanju</a>
+<br />
+<a href="/ModulUprava/Uloga/">ULOGEEE</a>
+<br />
+<a href="/ModulUprava/Zaposlenik/">ZAPOSLENICIIII</a>
+<br />
+
+<h2>Modul za sobaricu</h2>
+<a href="/ModulSobarica2/Sobarica2/">Održavanje soba</a>
+<br />
+<br />
+
+<h2>Modul za domara</h2>
+<a href="/ModulDomar/Domar/">Evidencija inventara</a>
+<br />
+
+<h2>Modul za gosta</h2>
+<a href="/ModulGost/Gost/">Rezervacija soba</a>*@

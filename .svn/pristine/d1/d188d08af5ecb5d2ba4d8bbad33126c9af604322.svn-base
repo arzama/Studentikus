@@ -1,0 +1,61 @@
+﻿
+@model  List<NasSeminarski.Areas.ModulUprava.Controllers.UlogaController.PrikaziVM>
+
+
+
+<h2 style="color:darkslategrey">
+
+    Upravljanje ulogama
+</h2>
+
+<br />
+
+<a href="/ModulUprava/Uloga/Dodaj" class="btn btn-success">
+    <span class=" glyphicon glyphicon-plus" aria-hidden="true">
+    </span>
+    Dodaj novu ulogu
+</a>
+<br/>
+<br />
+<table class="table table-striped">
+    <thead>
+        <tr>
+       
+            <th>Naziv</th>
+            <th>Opis</th>
+            <th>Broj korisnika</th>
+            <th>Akcija</th>
+
+
+        </tr>
+    </thead>
+
+    @foreach ( NasSeminarski.Areas.ModulUprava.Controllers.UlogaController.PrikaziVM x in Model)
+    {
+        <tr >
+            
+            <td>@x.Uloge.Naziv</td>
+            <td>@x.Uloge.Opis</td>
+           <td>@x.broj</td>
+
+            <td>
+
+            
+                @Html.ActionLink("Detalji", "Uredi", new { ulogaId = @x.Uloge.Id }, new { @class = "btn btn-warning btn-sm" })
+              
+
+                </td>
+            </tr>
+        }
+    </table>         
+
+
+<br />
+
+
+
+
+
+
+
+

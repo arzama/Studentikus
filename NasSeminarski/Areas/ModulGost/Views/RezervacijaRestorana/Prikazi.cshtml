@@ -1,0 +1,54 @@
+﻿@using System
+@using System.Collections.Generic
+@using System.IdentityModel
+@using NasSeminarski.Models
+
+@model NasSeminarski.Areas.ModulGost.Models.RestoranPrikaziVM
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Prikaz rezervacija</title>
+</head>
+<body>
+
+    <table class="table table-striped" style="border-bottom-color:ActiveBorder">
+        <thead>
+            <tr>
+                <th>Naziv događaja</th>
+                <th>Datum</th>
+                <th>Detalji</th>
+            </tr>
+        </thead>
+
+        @foreach (NasSeminarski.Areas.ModulGost.Models.RestoranPrikaziVM.Rezervacije x in Model.rezervacije)
+        {
+            <tr>
+                <th>@x.Naziv</th>
+                <th>@x.Datum.Value.ToShortDateString()</th>
+                <th>@x.Opis</th>
+
+                <td>
+                    @Html.ActionLink("Uredi", "Uredi", new { Id = @x.RezervacijaId }, new { @class = "btn btn-primary btn-sm" })
+                    @Html.ActionLink("Otkaži", "Ponisti", new { Id = @x.RezervacijaId }, new { @class = "btn btn-danger btn-sm" })
+
+                </td>
+            </tr>
+        }
+    </table>
+    </br>
+    </br>
+    </br>
+    <a href="/ModulGost/RezervacijaRestorana/Dodaj" class="btn btn-success btn-sm">
+        <span class=" glyphicon glyphicon-plus" aria-hidden="true">
+        </span>
+        Dodaj novu rezervaciju
+    </a>
+ 
+    </br>
+    </br>
+
+</body>
+</html>

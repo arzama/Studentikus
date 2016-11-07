@@ -1,0 +1,57 @@
+﻿@using NasSeminarski.Models
+@model NasSeminarski.Areas.ModulRecepcioner.Controllers.ZaduzenjaKljucaController.UrediVM
+
+<h1 style="color:darksalmon"><b>Zaduženje ključeva</b></h1>
+
+@using (Html.BeginForm("Snimi", "ZaduzenjaKljuca"))
+{
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        <label>Korisnik</label>
+        @Html.DropDownListFor(model => model.KorisnikId, Model.KorisnikStavka, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.KorisnikId)
+
+
+
+    </div>
+    <div class="form-group">
+        <label>Kljuc</label>
+        @Html.DropDownListFor(model => model.KljucId, Model.KljucStavka, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.KljucId)
+
+
+
+    </div>
+    <div class="form-group">
+        <label>Datum preuzimanja</label>
+        @Html.TextBoxFor(model => model.DatumPreuzimanja, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.DatumPreuzimanja)
+
+
+
+    </div>
+
+    <div class="form-group">
+        <label>Datum vracanja</label>
+        @Html.TextBoxFor(model => model.DatumVracanja, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.DatumVracanja)
+
+
+
+    </div>
+    <div class="form-group">
+        <label>Aktivan</label>
+        @Html.CheckBoxFor(model => model.Aktivan, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Aktivan)
+
+
+
+    </div>
+
+    <div>
+        @Html.ValidationSummary()
+    </div>
+    <input type="submit" value="Snimi" class="btn btn-danger" />
+}
+

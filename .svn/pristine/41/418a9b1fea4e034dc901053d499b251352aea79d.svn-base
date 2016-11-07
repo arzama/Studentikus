@@ -1,0 +1,69 @@
+﻿@{
+    //Layout = null;
+}
+
+<h1 style="color:darkred"><b>MODUL ZA RAČUNOVOĐU</b></h1>
+<br />
+<a href="/ModulRacunovodja/Racunovodja/Prikazi" class="btn btn-default btn-lg" style="color:darksalmon">
+    <span class=" glyphicon glyphicon-list-alt" aria-hidden="true">
+    </span>
+
+    Prikaži korisnike i njihova zaduženja
+</a>
+<a href="/ModulRacunovodja/Racunovodja/Dodaj" class="btn btn-default btn-lg" style="color:darksalmon">
+    <span class="glyphicon glyphicon-th-list " aria-hidden="true">
+    </span>
+
+    Evidentiraj novo zaduženje korisnika
+</a>
+
+<br />
+<br />
+<br />
+<br />
+
+<a href="/ModulRacunovodja/Plata/Prikazi" class="btn btn-default btn-lg" style="color:darksalmon">
+    <span class=" glyphicon glyphicon-list-alt" aria-hidden="true">
+    </span>
+
+   Prikaži evidentirane plate zaposlenika
+</a>
+<a href="/ModulRacunovodja/Plata/Dodaj" class="btn btn-default btn-lg" style="color:darksalmon">
+    <span class="glyphicon glyphicon-th-list " aria-hidden="true">
+    </span>
+
+ Evidentiraj novu platu zaposleniku
+</a>
+
+<br />
+<br />
+<br />
+<br />
+<a href="/ModulRacunovodja/Uplate/Prikazi" class="btn btn-default btn-lg" style="color:darksalmon">
+    <span class=" glyphicon glyphicon-list-alt" aria-hidden="true">
+    </span>
+
+    Prikaži evidentirane uplate
+</a>
+<a href="/ModulRacunovodja/Uplate/Dodaj" class="btn btn-default btn-lg" style="color:darksalmon">
+    <span class="glyphicon glyphicon-th-list " aria-hidden="true">
+    </span>
+
+    Dodaj novu uplatu
+</a>
+<br />
+<br />
+<br />
+<br />
+<a href="/ModulRacunovodja/Troskovi/Prikazi" class="btn btn-default btn-lg" style="color:darksalmon">
+    <span class=" glyphicon glyphicon-list-alt" aria-hidden="true">
+    </span>
+
+    Prikaži evidentirane troskove
+</a>
+<a href="/ModulRacunovodja/Troskovi/Dodaj" class="btn btn-default btn-lg" style="color:darksalmon">
+    <span class="glyphicon glyphicon-th-list " aria-hidden="true">
+    </span>
+
+   Evidentiraj novi trošak u hotelu
+</a>

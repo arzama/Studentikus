@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{006F3F6A-E23D-4EF3-82B9-2487E20BBABB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Studentikus_UI</RootNamespace>
+    <AssemblyName>Studentikus_UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DSPrimljeniStudenti.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPrimljeniStudenti.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Kljuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Kljuc.Designer.cs">
+      <DependentUpon>Frm_Kljuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ListofKorisnici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ListofKorisnici.Designer.cs">
+      <DependentUpon>frm_ListofKorisnici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pretragaKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pretragaKorisnika.Designer.cs">
+      <DependentUpon>frm_pretragaKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_RezervacijeByRecepcioneri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_RezervacijeByRecepcioneri.Designer.cs">
+      <DependentUpon>frm_RezervacijeByRecepcioneri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Sobe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Sobe.Designer.cs">
+      <DependentUpon>frm_Sobe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Main.Designer.cs">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Desavanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Desavanja.Designer.cs">
+      <DependentUpon>frm_Desavanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ZaduzenjeKljuca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ZaduzenjeKljuca.Designer.cs">
+      <DependentUpon>frm_ZaduzenjeKljuca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Zaposlenici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Zaposlenici.Designer.cs">
+      <DependentUpon>frm_Zaposlenici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TrenutniGosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TrenutniGosti.Designer.cs">
+      <DependentUpon>frm_TrenutniGosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\frm_BrojDesavanja_rpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frm_BrojDesavanja_rpt.Designer.cs">
+      <DependentUpon>frm_BrojDesavanja_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frm_Desavanja_rpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frm_Desavanja_rpt.Designer.cs">
+      <DependentUpon>frm_Desavanja_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frm_GostiiPet_rpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frm_GostiiPet_rpt.Designer.cs">
+      <DependentUpon>frm_GostiiPet_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Frm_Kljuc_rpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Frm_Kljuc_rpt.Designer.cs">
+      <DependentUpon>Frm_Kljuc_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frm_ObrociDanas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frm_ObrociDanas.Designer.cs">
+      <DependentUpon>frm_ObrociDanas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frm_PrimljeniStudenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frm_PrimljeniStudenti.Designer.cs">
+      <DependentUpon>frm_PrimljeniStudenti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frm_RezervacijePoPretrazi_rpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frm_RezervacijePoPretrazi_rpt.Designer.cs">
+      <DependentUpon>frm_RezervacijePoPretrazi_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frm_RezervacijeTKM_Rpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frm_RezervacijeTKM_Rpt.Designer.cs">
+      <DependentUpon>frm_RezervacijeTKM_Rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Frm_Rodjendan_rpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Frm_Rodjendan_rpt.Designer.cs">
+      <DependentUpon>Frm_Rodjendan_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frm_SobeInventari_rpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frm_SobeInventari_rpt.Designer.cs">
+      <DependentUpon>frm_SobeInventari_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frm_ZaposleniciUloge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frm_ZaposleniciUloge.Designer.cs">
+      <DependentUpon>frm_ZaposleniciUloge.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Frm_Kljuc.resx">
+      <DependentUpon>Frm_Kljuc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ListofKorisnici.resx">
+      <DependentUpon>frm_ListofKorisnici.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pretragaKorisnika.resx">
+      <DependentUpon>frm_pretragaKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_RezervacijeByRecepcioneri.resx">
+      <DependentUpon>frm_RezervacijeByRecepcioneri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Sobe.resx">
+      <DependentUpon>frm_Sobe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Main.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Desavanja.resx">
+      <DependentUpon>frm_Desavanja.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ZaduzenjeKljuca.resx">
+      <DependentUpon>frm_ZaduzenjeKljuca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Zaposlenici.resx">
+      <DependentUpon>frm_Zaposlenici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TrenutniGosti.resx">
+      <DependentUpon>frm_TrenutniGosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\frm_BrojDesavanja_rpt.resx">
+      <DependentUpon>frm_BrojDesavanja_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frm_Desavanja_rpt.resx">
+      <DependentUpon>frm_Desavanja_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frm_GostiiPet_rpt.resx">
+      <DependentUpon>frm_GostiiPet_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Frm_Kljuc_rpt.resx">
+      <DependentUpon>Frm_Kljuc_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frm_ObrociDanas.resx">
+      <DependentUpon>frm_ObrociDanas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frm_PrimljeniStudenti.resx">
+      <DependentUpon>frm_PrimljeniStudenti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frm_RezervacijePoPretrazi_rpt.resx">
+      <DependentUpon>frm_RezervacijePoPretrazi_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frm_RezervacijeTKM_Rpt.resx">
+      <DependentUpon>frm_RezervacijeTKM_Rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Frm_Rodjendan_rpt.resx">
+      <DependentUpon>Frm_Rodjendan_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frm_SobeInventari_rpt.resx">
+      <DependentUpon>frm_SobeInventari_rpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frm_ZaposleniciUloge.resx">
+      <DependentUpon>frm_ZaposleniciUloge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptZaposleniciUloge.rdlc" />
+    <EmbeddedResource Include="Reports\rpt_BrojDesavanja.rdlc" />
+    <EmbeddedResource Include="Reports\rpt_Desavanja.rdlc" />
+    <EmbeddedResource Include="Reports\rpt_GostiPet.rdlc" />
+    <EmbeddedResource Include="Reports\rpt_Inventari.rdlc" />
+    <EmbeddedResource Include="Reports\rpt_Kljuc.rdlc" />
+    <EmbeddedResource Include="Reports\rpt_Korisnici.rdlc" />
+    <EmbeddedResource Include="Reports\rpt_ObrociDanas.rdlc" />
+    <EmbeddedResource Include="Reports\rpt_PrimljeniStudenti.rdlc" />
+    <EmbeddedResource Include="Reports\rpt_RezervacijePoPretrazi.rdlc" />
+    <EmbeddedResource Include="Reports\rpt_Rodjendan.rdlc" />
+    <None Include="DSPrimljeniStudenti.xsc">
+      <DependentUpon>DSPrimljeniStudenti.xsd</DependentUpon>
+    </None>
+    <None Include="DSPrimljeniStudenti.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPrimljeniStudenti.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSPrimljeniStudenti.xss">
+      <DependentUpon>DSPrimljeniStudenti.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Studentikus_DAL.DSRezervacijeTableAdapters.KorisniksTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSRezervacijeTableAdapters.RezervacijaSobesTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSRezervacijeTableAdapters.SobasTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSRezervacijeTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DSRezervacijeTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_Kljuc.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_Studentikus+DesavanjasDataTable.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_Studentikus+DesavanjasRow.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_Studentikus+DesavanjasRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_Studentikus+DesavanjasRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Studentikus_DAL.DS_Studentikus.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slika2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Studentikus_DAL\Studentikus_DAL.csproj">
+      <Project>{c150dcd8-4ca7-4d5d-a11d-1443b34c2e00}</Project>
+      <Name>Studentikus_DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

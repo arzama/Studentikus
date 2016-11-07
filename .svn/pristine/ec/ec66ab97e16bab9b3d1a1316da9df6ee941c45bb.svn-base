@@ -1,0 +1,68 @@
+﻿@using System
+@using System.Collections.Generic
+@using System.IdentityModel
+@using NasSeminarski.Models
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dodaj</title>
+</head>
+<body>
+    <h1><b>Studentski hotel "Studentikus"</b></h1>
+    <h2><b>Evidencija inventara</b></h2>
+    <div>
+        <form action="/ModulDomar/Domar/Snimi" />
+        <table>
+            <tr>
+                <th>Naziv</th>
+                <td>
+                    <input id="nazivInput" type="text" name="naziv" />
+                </td>
+            </tr>
+            <tr>
+                <th>Opis</th>
+                <td>
+                    <input id="opisInput" type="text" name="opis" />
+                </td>
+            </tr>
+            <tr>
+                <th>Cijena</th>
+                <td>
+                    <input id="cijenaInput" type="text" name="cijena" />
+                </td>
+            </tr>
+         
+            <tr>
+                <th>Sala</th>
+                <td>
+                    <input id="salaInput" type="text" name="sala" />
+                </td>
+            </tr>
+            <tr>
+                <th>Restoran</th>
+                <td>
+                    <input id="restoranInput" type="text" name="restoran" />
+                </td>
+            </tr>
+            <tr>
+                <th>Domar</th>
+                <td>
+                    <input id="domarInput" type="text" name="domar" />
+                </td>
+            </tr>
+            <tr>
+                <th>Soba</th>
+                <td>
+                    <input id="sobaInput" type="text" name="soba" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <input id="sacuvajBtn" type="submit" value="Sačuvaj" />
+    </div>
+</body>
+</html>

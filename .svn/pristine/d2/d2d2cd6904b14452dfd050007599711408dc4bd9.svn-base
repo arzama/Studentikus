@@ -1,0 +1,197 @@
+﻿@{
+    ViewBag.Title = "UVID U REZERVACIJE SOBA";
+}
+@using NasSeminarski.Areas.ModulSobarica2.Helper
+@using NasSeminarski.DAL
+@using NasSeminarski.Models
+@model System.Collections.Generic.List<NasSeminarski.Models.Soba>
+<h1 style="color:darkred "><b>PREGLED REZERVACIJA</b></h1>
+@{
+    DateTime d1 = (DateTime)ViewData["datum"];
+    string d = d1.ToShortDateString();
+    DateTime d2 = d1.AddDays(1);
+    string dd = d2.ToShortDateString();
+    DateTime d3 = d1.AddDays(2);
+    string ddd = d3.ToShortDateString();
+    DateTime d4 = d1.AddDays(3);
+    string dddd = d4.ToShortDateString();
+    DateTime d5 = d1.AddDays(4);
+    string ddddd = d5.ToShortDateString();
+    DateTime d6 = d1.AddDays(5);
+    string dddddd = d6.ToShortDateString();
+    DateTime d7 = d1.AddDays(6);
+    string ddddddd = d7.ToShortDateString();
+
+}
+<th class="table table-bordered">
+    @Html.ActionLink("PREGLEDAJ REZERVACIJE ZA PRETHODNU SEDMICU", "Prikazi2", new { datum = @d1.AddDays(-7) }, new { @class = "btn btn-danger" })
+</th>
+<br />
+<br />
+<th class="table table-bordered">
+    @Html.ActionLink("PREGLEDAJ REZERVACIJE ZA SLJEDEĆU SEDMICU", "Prikazi2", new { datum = @d7.AddDays(1) }, new { @class = "btn btn-danger" })
+    <br>
+    <br>
+    @Html.ActionLink("DODAJ NOVU REZERVACIJU", "Dodaj", new { }, new { @class = "btn btn-danger" })
+    </th>
+<br />
+<br />
+
+    <table class="table table-bordered" style="background-color:lavender">
+
+        @foreach (Soba x in Model)
+        {
+
+            <tr>
+
+
+                <td style="color:red">
+                  Broj sobe:@x.BrojSobe
+                </td>
+                @{
+            RezervacijaSobe s1 = ProvjeraRezervacije.getRezervacija(x, d1);
+                }
+                @if (s1 != null)
+                {
+
+                    <td style="background-color: yellow">
+                        @d
+                        @Html.ActionLink(s1.Korisnik.Ime + " " + s1.Korisnik.Prezime, "Uredi", new { rezervacijaId = s1.Id }, new { @class = "btn btn-danger" })
+                        @Html.ActionLink("Ponisti rezervaciju", "Ponisti", new { raId = s1.Id }, new { @class = "btn btn-danger" })
+
+                    </td>
+                }
+                else
+                {
+                    <td style="background-color:ActiveCaption">
+                        @d
+                        <label>SLOBODNO</label>
+                    </td>
+                }
+
+                @{
+            RezervacijaSobe s2 = ProvjeraRezervacije.getRezervacija(x, d2);
+                }
+                @if (s2 != null)
+                {
+
+                    <td style="background-color: yellow">
+                        @dd
+                        @Html.ActionLink(s2.Korisnik.Ime + " " + s2.Korisnik.Prezime, "Uredi", new { rezervacijaId = s2.Id }, new { @class = "btn btn-danger" })
+                        @Html.ActionLink("Ponisti rezervaciju", "Ponisti", new { raId = s2.Id }, new { @class = "btn btn-danger" })
+                    </td>
+                }
+                else
+                {
+                    <td style="background-color:ActiveCaption">
+                        @dd
+                        <label>SLOBODNO</label>
+                    </td>
+                }
+
+
+                @{
+            RezervacijaSobe s3 = ProvjeraRezervacije.getRezervacija(x, d3);
+                }
+                @if (s3 != null)
+                {
+                    <td style="background-color: yellow">
+                        @ddd
+                        @Html.ActionLink(s3.Korisnik.Ime + " " + s3.Korisnik.Prezime, "Uredi", new { rezervacijaId = s3.Id }, new { @class = "btn btn-danger" })
+                        @Html.ActionLink("Ponisti rezervaciju", "Ponisti", new { raId = s3.Id }, new { @class = "btn btn-danger" })
+                    </td>
+                }
+                else
+                {
+                    <td style="background-color:ActiveCaption">
+                        @ddd
+                        <label>SLOBODNO</label>
+                    </td>
+                }
+
+
+                @{
+            RezervacijaSobe s4 = ProvjeraRezervacije.getRezervacija(x, d4);
+                }
+                @if (s4 != null)
+                {
+                    <td style="background-color: yellow">
+                        @dddd
+                        @Html.ActionLink(s4.Korisnik.Ime + " " + s4.Korisnik.Prezime, "Uredi", new { rezervacijaId = s4.Id }, new { @class = "btn btn-danger" })
+                        @Html.ActionLink("Ponisti rezervaciju", "Ponisti", new { raId = s4.Id }, new { @class = "btn btn-danger" })
+                    </td>
+                }
+                else
+                {
+                    <td style="background-color:ActiveCaption">
+                        @dddd
+                        <label>SLOBODNO</label>
+                    </td>
+                }
+
+
+                @{
+            RezervacijaSobe s5 = ProvjeraRezervacije.getRezervacija(x, d5);
+                }
+                @if (s5 != null)
+                {
+                    <td style="background-color:yellow">
+                        @ddddd
+                        @Html.ActionLink(s5.Korisnik.Ime + " " + s5.Korisnik.Prezime, "Uredi", new { rezervacijaId = s5.Id }, new { @class = "btn btn-danger" })
+                        @Html.ActionLink("Ponisti rezervaciju", "Ponisti", new { raId = s5.Id }, new { @class = "btn btn-danger" })
+                    </td>
+                }
+                else
+                {
+                    <td style="background-color:ActiveCaption">
+                        @ddddd
+                        <label>SLOBODNO</label>
+                    </td>
+                }
+
+
+                @{
+            RezervacijaSobe s6 = ProvjeraRezervacije.getRezervacija(x, d6);
+                }
+                @if (s6 != null)
+                {
+                    <td style="background-color: yellow">
+                        @dddddd
+                        @Html.ActionLink(s6.Korisnik.Ime + " " + s6.Korisnik.Prezime, "Uredi", new { rezervacijaId = s6.Id }, new { @class = "btn btn-danger" })
+                        @Html.ActionLink("Ponisti rezervaciju", "Ponisti", new { raId = s6.Id }, new { @class = "btn btn-danger" })
+                    </td>
+                }
+                else
+                {
+                    <td style="background-color:ActiveCaption">
+                        @dddddd
+                        <label>SLOBODNO</label>
+                    </td>
+                }
+
+
+                @{
+            RezervacijaSobe s7 = ProvjeraRezervacije.getRezervacija(x, d7);
+                }
+                @if (s7 != null)
+                {
+                    <td style="background-color: yellow">
+                        @ddddddd
+                        @Html.ActionLink(s7.Korisnik.Ime + " " + s7.Korisnik.Prezime, "Uredi", new { rezervacijaId = s7.Id }, new { @class = "btn btn-danger" })
+                        @Html.ActionLink("Ponisti rezervaciju", "Ponisti", new { raId = s7.Id }, new { @class = "btn btn-danger" })
+                    </td>
+                }
+                else
+                {
+
+                    <td style="background-color:ActiveCaption">
+                        @ddddddd
+                        <label>SLOBODNO</label>
+
+                    </td>
+                }
+
+            </tr>
+
+        }
+    </table>

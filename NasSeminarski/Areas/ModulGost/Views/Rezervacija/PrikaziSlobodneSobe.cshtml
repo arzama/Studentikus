@@ -1,0 +1,30 @@
+﻿@using NasSeminarski.Models
+@model List<NasSeminarski.Models.Soba>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Broj sobe</th>
+            <th>Detalji</th>
+            <th>Cijena</th>
+       <th>Akcija</th>
+        </tr>
+    </thead>
+    @foreach (Soba x in Model)
+    {
+
+        <tr>
+
+            <td>@x.BrojSobe</td>
+            <td>@x.Detalji</td>
+            <td>@x.Cijena KM</td>
+           <td>
+               @Html.ActionLink("Rezerviši", "Uredi", new { raId = @x.Id }, new { @class = "btn btn-info btn-sm" })
+
+
+           </td>
+        </tr>
+    }
+
+    
+</table>

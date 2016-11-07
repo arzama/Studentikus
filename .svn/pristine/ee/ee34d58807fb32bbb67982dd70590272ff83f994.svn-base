@@ -1,0 +1,57 @@
+﻿@using NasSeminarski.Models
+@model System.Collections.Generic.List<NasSeminarski.Models.Korisnik>
+
+<h3 style="color:darkred"><b>Korisnici studentskog hotela</b></h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Datum rodjenja</th>
+            <th>Adresa</th>
+            <th>Email</th>
+            <th>Kontakt</th>
+            <th>Korisnicko ime</th>
+            <th>Lozinka</th>
+            <th>Uloga</th>
+            <th>Akcija</th>
+
+
+
+        </tr>
+    </thead>
+    @foreach (Korisnik x in Model)
+    {
+
+        <tr>
+
+            <td>@x.Ime</td>
+            <td>@x.Prezime</td>
+            <td>@x.DatumRodjenja</td>
+            <td>@x.Adresa </td>
+            <td>@x.Email</td>
+            <td>@x.Kontakt</td>
+            <td>@x.KorisnickoIme</td>
+            <td>@x.Lozinka</td>
+            <td>@x.Uloge.Naziv</td>
+
+            <td>
+
+
+
+                @Html.ActionLink("Uredi", "Uredi", new { korisnikId = @x.Id }, new { @class = "btn btn-danger" })
+
+
+            </td>
+
+
+        </tr>
+    }
+</table>
+
+<td>
+    @Html.ActionLink("DODAJ NOVOG KORISNIKA", "Dodaj", new { }, new { @class = "btn btn-danger" })
+</td>
+
+
+

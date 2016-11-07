@@ -1,0 +1,85 @@
+﻿@using System
+@using System.Collections.Generic
+@using System.IdentityModel
+@using NasSeminarski.Models
+
+@model NasSeminarski.Areas.ModulSobarica2.Models.SobaricaPrikazi2ViewModel
+
+
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+
+<br />
+    <form>
+    <div class="form-inline">
+        @Html.DropDownListFor(model => model.SobaId, Model.SobeStavke, new { @class = "form-control" })
+        <input type="submit" value="Prikazi" class="btn btn-success" />
+         
+     </div>
+        <div class="form-inline">
+            @Html.DropDownListFor(model => model.OdrzavanjeId, Model.DatumiStavke, new { @class = "form-control" })
+            <input type="submit" value="Prikazi" class="btn btn-success" />
+
+        </div>
+
+</form>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+
+            <th>Broj sobe</th>
+            <th>Datum</th>
+            <th>Komentar</th>
+            <th>Akcija</th>
+
+        </tr>
+    </thead>
+
+    @foreach (NasSeminarski.Areas.ModulSobarica2.Models.SobaricaPrikazi2ViewModel.OdrzavanjeInfo x in Model.odrzavanja)
+    {
+        <tr>
+
+            <th>@x.BrojSobe</th>
+            <th>@x.Datum</th>
+            <th>@x.Komentar</th>
+            <th>
+                @*@using (Ajax.BeginForm("Uredi", "Sobarica2",new AjaxOptions() { UpdateTargetId = "div" }, new { @style = "display: inline" }))
+                {
+                    @Html.Hidden("OdrzavanjeId", x.Id)
+                    <input type="submit" value="Uredi" class="btn btn-warning btn-sm" />
+                }*@
+
+                @Html.ActionLink("Uredi", "Uredi", new { OdrzavanjeId = @x.Id }, new { @class = "btn btn-danger btn-sm" } )
+                @Html.ActionLink("Obriši", "Obrisi", new { Id = @x.Id }, new { @class = "btn btn-danger btn-sm" })
+
+            </th>
+          
+        </tr>
+
+
+    }
+</table>
+
+<br />
+<br />
+<a href="/ModulSobarica2/Sobarica2/Dodaj" class="btn btn-default btn-sm">
+    <span class=" glyphicon glyphicon-plus" aria-hidden="true">
+    </span>
+    Dodaj podatke o novom čišćenju
+</a>
+        
+
+@*<div class="panel panel-success" style="margin-top: 20px">
+    <div class="panel-heading">
+        <h3>Evidencija ciscenja</h3>
+    </div>
+    <div class="panel-body">
+        <div id="div"></div>
+    </div>
+</div>*@
+
+

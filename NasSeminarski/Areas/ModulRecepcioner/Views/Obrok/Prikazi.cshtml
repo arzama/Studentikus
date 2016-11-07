@@ -1,0 +1,46 @@
+﻿@using NasSeminarski.Models
+@model System.Collections.Generic.List<NasSeminarski.Models.EvidencijaObroka>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Datum</th>
+            <th>Ime studenta</th>
+            <th>Broj obroka</th>
+            <th>Placeno</th>
+            <th>Akcija</th>
+
+
+
+        </tr>
+    </thead>
+    @foreach (EvidencijaObroka x in Model)
+    {
+
+        <tr>
+
+            <td>@x.Datum</td>
+            <td>@x.Student.Korisnik.Ime @x.Student.Korisnik.Prezime</td>
+            <td>@x.BrojObroka</td>
+            <td>@x.Uplaceno</td>
+           
+            <td>
+
+
+
+                @Html.ActionLink("Uredi", "Uredi", new { obrokId = @x.Id }, new { @class = "btn btn-danger" })
+
+
+            </td>
+
+
+        </tr>
+    }
+</table>
+
+<td>
+    @Html.ActionLink("DODAJ NOVI OBROK", "Dodaj", new { }, new { @class = "btn btn-danger" })
+</td>
+
+
+
